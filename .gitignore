@@ -162,3 +162,4 @@ cython_debug/
 groq-playground
 groq-playground/**
 dev-config.yaml
+**/.DS_Store
