@@ -128,10 +128,81 @@ def main():
                                    Then you have to tell to the user which is the most relevant feeling the user is having.
                                    Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. 
 
+                                   Based on the user prompt try to assume to be the user and try to answer the following 6 questions giving a score from 1 to 7 for each one.
+
+                                   For these first four questions, if you are in a relationship, answer them with respect to your current relationship. If you are not currently in a relationship, answer them by considering either your most recent past relationship, or a potential relationship on the horizon, whichever you prefer.
+    
+                                   Question 1
+                                    Which of these best describes your relationship?
+                                    1 - Our relationship ended because of cataclysmic past offenses. OR Our relationship has some serious problems.
+                                    2 - My feelings were a bit hurt when our relationship ended. OR Our relationship is going ok but has some problems.
+                                    3 - Our relationship ended, but not in a horribly bad way. It just ended. OR I feel pretty mediocre about the quality of our relationship.
+                                    4 - I wish I was in a relationship, but I don't think it will happen right now. OR I'm happy without a relationship right now.
+                                    5 - My relationship is pretty casual at the moment, not official or anything. OR I look back fondly on my past relationship, without feeling hurt or angry.
+                                    6 - My relationship is going well and we're thinking about long-term commitment.
+                                    7 - I'm getting married and/or comitting to this relationship for the rest of my life.
+                                
+                                   Question 2
+                                   What does the future of your relationship look like?
+                                    1 - We're never speaking again.
+                                    2 - We're probably going to see each other again at some point, but we won't be in touch much at all.
+                                    3 - We might talk a bit less than we did in the past.
+                                    4 - I'm not sure what our future is.
+                                    5 - We've got some casual future plans but nothing serious lined up. OR We might hang out but I'm not sure.
+                                    6 - We're going to be spending a fair amount of time together in the future.
+                                    7 - We're going to be spending a large amount of time together. Like maybe getting married.
+                                
+                                   Question 3
+                                   	What are the other person's feelings about you?
+                                    1 - They've told me they hate me.
+                                    2 - I think they don't like me that much. OR They've insulted me some.
+                                    3 - They're nice to me but they see me as just a friend.
+                                    4 - I'm not sure and/or they haven't made it clear to me.
+                                    5 - They maybe have some non-platonic feelings for me but I'm not sure how strong they are.
+                                    6 - They've told me that they have some feelings for me.
+                                    7 - They have openly declared their love for me to the world.
+                                   
+                                   Question 4
+                                   	Which of these best describes how you spend your time together?
+                                    1 - There are significant barriers that prevent us from being together.
+                                    2 - There aren't any insurmountable barriers between us, but we never do anything together.
+                                    3 - We do some things together but spend most of our time doing things alone.
+                                    4 - We do about the same amount of stuff together as we do alone.
+                                    5 - We do some things alone but spend most of our time doing things together.
+                                    6 - We do pretty much everything together.
+                                    7 - We do everything together, and even when we aren't together I only think about us being together.
+
+                                    For these next two questions, think about how you feel about your life overall.
+                                    Question 5
+                                    Which of these best describes how you feel about yourself?
+                                    1 - I have a lot of problems and they're all my fault.
+                                    2 - I have a lot of problems, but I don't think they're all my fault.
+                                    3 - I don't have a ton of significant problems, but sometimes I think I could do better.
+                                    4 - I'm not really sure how I feel.
+                                    5 - I feel pretty good about myself, and am just a little insecure on occasion.
+                                    6 - I have a few concerns but feel very good overall.
+                                    7 - I'm awesome, my life is awesome, this is the bomb.
+                                   
+                                   Question 6
+                                   Which of these describes your emotional state?
+                                    1 - You're really angry about something and/or really depressed about something.
+                                    2 - You don't like how your life is going and you just want to make a deal to get your old life back.
+                                    3 - You know something's wrong with your life but you want to ignore it.
+                                    4 - You've accepted the bad things that have happened to you and are ready to move on from them.
+                                    5 - You're feeling pretty neutral and you're waiting for life to make you happy.
+                                    6 - You're actively working to make yourself happy.
+                                    7 - You're actively working to make yourself happy and trying to make sure that everyone else is happy too.
+
                                    This is your only goal. Don't try to do anything else.
                                    If the user input is not clear, you have to ask the user to provide more details. 
                                    Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
                                    If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
+
+                                   You should return:
+                                   - a message that contains the most relevant feeling the user is having.
+                                   - a Taylor Swift song that is compatible with the user mood.
+                                   - the scores for each question.
+
                         """)
                     ),
                     HumanMessagePromptTemplate.from_template("{text}")
