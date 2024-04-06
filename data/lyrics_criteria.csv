@@ -1,0 +1,53 @@
+﻿criterion,score,description,example
+feelings_of_self,-3,Feels fully responsible for problems,"""Stupid girl / I should have known / I should have known"" (White Horse )"
+feelings_of_self,-2,Feels partial responsibility for problems ,“No one teaches you what to do / When a good man hurts you / And you know you hurt him too” (happiness)
+feelings_of_self,-1,Hints at self-deprecation ,"“Maybe we got lost in translation, maybe I asked for too much” (All Too Well)"
+feelings_of_self,0,No feelings mentioned/ambiguous feelings ,(Blank Space)
+feelings_of_self,1,Overall positive with serious insecurities ,“You have pointed out my flaws again / As if I don’t already see them / I walk with my head down / Trying to block you out ’cause I’ll never impress you” (Mean)
+feelings_of_self,2,"
+Overall positive with some reservations","“20 questions, we tell the truth / You’ve been stressed out lately, yeah, me too” (It’s Nice To Have A Friend)"
+feelings_of_self,3,Secure and trusting in life circumstances ,“And we see you over there on the internet / Comparing all the girls who are killing it / But we figured you out / We all know now / We all got crowns” (You Need To Calm Down)
+glass_half_full,-3,All imagery is depressing ,"“And then the cold came, the dark days when fear crept into my mind” (Back To December)"
+glass_half_full,-2,Nearly all depressing imagery ,"“How you laugh when you lie / You said the gun was mine / Isn’t cool, no I don’t like you / But I got smarter, I got harder” (Look What You Made Me Do)"
+glass_half_full,-1,Majority depressing imagery,“Stealing hearts and running off and never saying sorry / But if I’m a thief then / He can join the heist” (...Ready For It?)
+glass_half_full,0,Equal amounts of happy and sad imagery ,“Rain came pouring down when I was drowning / That’s when I could finally breathe” (Clean)
+glass_half_full,1,Majority positive imagery,"“We’re happy, free, confused, and lonely in the best way / It’s miserable and magical” (22)"
+glass_half_full,2,Nearly all positive imagery,"“This love is difficult, but it’s real / Don’t be afraid, we’ll make it out of this mess / It’s a love story, baby just say yes” (Love Story) "
+glass_half_full,3,All imagery is positive ,"“And all I feel in my stomach is butterflies / The beautiful kind, making up for lost time” (Everything Has Changed) "
+stages,-3,Anger / Depression,"“Soon she’s gonna find / Stealing other people’s toys / On the playground won’t make you many friends” (Better Than Revenge) 
+He’s the reason for the teardrops on my guitar” (Teardrops On My Guitar )"
+stages,-2,Bargaining,"“If it’s all in my head, tell me now / Tell me I’ve got it wrong somehow” (tolerate it)"
+stages,-1,Denial,“We found wonderland / You and I got lost in it / And we pretended it could last forever” (Wonderland)
+stages,0,Acceptance,“And all the pieces fall / Right into place / ... / So it goes” (So It Goes...)
+stages,1,Passively wanting to be happy ,“I wish you would come back / Wish I never hung up the phone like I did” (I Wish You Would)
+stages,2,Actively working for her happiness ,“Drop everything now / Meet me in the pouring rain / Kiss me on the sidewalk / Take away the pain” (Sparks Fly)
+stages,3,Actively working for her own and others’ happiness,“I’ll fight their doubt and give you faith / With this song for you” (Ours ) 
+seriousness,-3,Cataclysmic past offenses ,“It rains when you’re here and it rains when you’re gone / ’Cause I was there when you said forever and always / You didn’t mean it baby” (Forever & Always)
+seriousness,-2,Some past hurt feelings ,"“X marks the spot where we fell apart / He poisoned the well, I was lying to myself” (Getaway Car)"
+seriousness,-1,Unspecified relationship endings ,“And what once was ours is no one’s now” (Death By A Thousand Cuts )
+seriousness,0,Not discussed/Pining,“Please don’t be in love with someone else / Please don’t have somebody waiting on you” (Enchanted)
+seriousness,1,Puppy love/One night stand ,“With all those nights we’re spending / Up on the roof with a school girl crush” (King Of My Heart)
+seriousness,2,Some real world things to discuss ,“But you start to talk about the movies that your family watches / Every single Christmas and I want to talk about that” (Begin Again) 
+seriousness,3,Discussion of marriage/equally serious topics,"“And you know that I’d swing with you for the fences / Sit with you in the trenches / Give you my wild, give you a child” (peace) "
+future_prospects,-3,Permanent end to communication ,"“This time, I’m telling you / We are never, ever, ever getting back together” (We Are Never Getting Back Together)"
+future_prospects,-2,Significant decrease in contact ,“Say you’ll see me again / Even if it’s just pretend” (Wildest Dreams) 
+future_prospects,-1,Possible decrease in contact ,"“Guess I’ll just stumble on home to my cats / Alone, unless you want to come along” (Gorgeous)"
+future_prospects,0,No discussion of future/Ambiguous ,“This love is alive back from the dead / These hands had to let it go free but / This love came back to me” (This Love)
+future_prospects,1,Casual or potential future plans ,"“Hey Stephen, I could give you fifty reasons / Why I should be the one you choose” (Hey Stephen)"
+future_prospects,2,Some set future plans ,"“Morning, his place / Burnt toast, Sunday / You keep his shirt / He keeps his word” (You Are In Love) "
+future_prospects,3,Marriage/Bound for life ,"“I’ll be eighty-seven, you’ll be eighty-nine / I’ll still look at you like the stars that shine” (Mary’s Song) "
+feelings_of_male,-3,He tells all his friends he hates her ,“Did you think I wouldn’t hear all the things you said about me?” (This Is Why We Can’t Have Nice Things)
+feelings_of_male,-2,He makes a face when her name is mentioned but doesn’t publicly hate on her,"“Why’d I have to break what I love so much? / It’s on your face, and I’m to blame” (Afterglow) "
+feelings_of_male,-1,He doesn’t want to date but likes her as a friend,And you can’t see me wanting you the way you want her / But you are everything to me” (Invisible)
+feelings_of_male,0,No information/Ambiguous,(Dancing With Our Hands Tied)
+feelings_of_male,1,He expressed casual interest in a relationship ,“I say ’I’ve heard that you’ve been out and about with some other girl.’ / He says ’What you heard is true but I / can’t stop thinking about you”’ (Style)
+feelings_of_male,2,They are dating but not that seriously (she hasn’t met his parents) ,“But you pull me in and I’m a little more brave / It’s the first kiss” (Fearless)
+feelings_of_male,3,Public declaration of love/commitment,“I never wanna see you walk away” (ME!) 
+togetherness,-3,Barriers to joint actions ,"Distance: “But you’re in London and I break down / ’Cause it’s not fair that you’re not around” (Come Back...Be Here) 
+Another Woman/Man: “She said ’James, get in, let’s drive’ / Those days turned into nights / Slept next to her, but / I dreamt of you” (betty)"
+togetherness,-2,No joint actions,(The Man)
+togetherness,-1,More things apart than together ,"(Holy Ground, You Belong With Me)"
+togetherness,0,Equal amounts of time together and apart ,"(willow, Treacherous)"
+togetherness,1,More things together than apart ,"(Stay Beautiful, New Year’s Day)"
+togetherness,2,They do everything together,(Paper Rings)
+togetherness,3,No identity as an individual ,“I’m only up when you’re not down / Don’t wanna fly if you’re still on the ground” (I’m Only Me When I’m With You) 
