@@ -1,4 +1,4 @@
-song_name,album,happy_sad,relationship,feelings_of_self,glass_half_full,stages,tempo,seriousness,future_prospects,feelings_of_male,togetherness,lyrics
+song_name,album,happy_sad,relationship,feelings_of_self,glass_half_full,stages,tempo,seriousness,future_prospects,feelings_of_male,togetherness,lyrics,spotify_uri,url
 cold as you,Taylor Swift,-10,-8,-1,-3,-3,-3,-3,-3,-1,-1,"You have a way of coming easily to me
  And when you take, you take the very best of me
  So I start a fight 'cause I need to feel something
@@ -34,7 +34,7 @@ cold as you,Taylor Swift,-10,-8,-1,-3,-3,-3,-3,-3,-1,-1,"You have a way of comin
  Counting all the scars you made
  And now that I'm sitting here thinking it through
  I've never been anywhere cold as you
- Ooh-oh "
+ Ooh-oh ",7an1exwMnfYRcdVQm0yDev,https://open.spotify.com/track/7an1exwMnfYRcdVQm0yDev
 i'm only me when i'm with you,Taylor Swift,9,10,3,3,1,2,2,2,3,3,"Friday night beneath the stars
  In a field behind your yard
  You and I are painting pictures in the sky
@@ -85,7 +85,7 @@ i'm only me when i'm with you,Taylor Swift,9,10,3,3,1,2,2,2,3,3,"Friday night be
  Who I wanna be
  Well, I'm only me when I'm with you
  With you
- Uh-huh-huh, yeah "
+ Uh-huh-huh, yeah ",0JIdBrXGSJXS72zjF9ss9u,https://open.spotify.com/track/0JIdBrXGSJXS72zjF9ss9u
 invisible,Taylor Swift,-1,-4,0,-2,1,0,0,0,-1,-3,"She can't see the way your eyes
  Light up when you smile
  She'll never notice how you stop and stare
@@ -135,7 +135,7 @@ invisible,Taylor Swift,-1,-4,0,-2,1,0,0,0,-1,-3,"She can't see the way your eyes
  Oh, yeah
  
  She can't see the way your eyes
- Light up when you smile "
+ Light up when you smile ",5OOd01o2YS1QFwdpVLds3r,https://open.spotify.com/track/5OOd01o2YS1QFwdpVLds3r
 mary's song,Taylor Swift,5,12,0,2,1,2,3,3,3,3,"She said I was seven and you were nine
  I looked at you like the stars that shined
  In the sky, the pretty lights
@@ -181,7 +181,7 @@ mary's song,Taylor Swift,5,12,0,2,1,2,3,3,3,3,"She said I was seven and you were
  
  And I'll be eighty-seven, you'll be eighty-nine
  I'll still look at you like the stars that shine
- In the sky, oh, my, my, my "
+ In the sky, oh, my, my, my ",2QrQCMel6v2JiLxqrg4p2O,https://open.spotify.com/track/2QrQCMel6v2JiLxqrg4p2O
 our song,Taylor Swift,5,6,2,2,1,0,1,1,3,1,"I was ridin' shotgun with my hair undone
  In the front seat of his car
  He's got a one-hand feel on the steering wheel
@@ -238,7 +238,7 @@ our song,Taylor Swift,5,6,2,2,1,0,1,1,3,1,"I was ridin' shotgun with my hair und
  I was ridin' shotgun with my hair undone
  In the front seat of his car
  I grabbed a pen and an old napkin
- And I wrote down our song "
+ And I wrote down our song ",15DeqWWQB4dcEWzJg15VrN,https://open.spotify.com/track/15DeqWWQB4dcEWzJg15VrN
 the outside,Taylor Swift,-5,-2,-2,-3,-2,2,0,0,0,-2,"I didn't know what I would find
  When I went looking for a reason, I know
  I didn't read between the lines
@@ -282,7 +282,7 @@ the outside,Taylor Swift,-5,-2,-2,-3,-2,2,0,0,0,-2,"I didn't know what I would f
  Oh-oh
  Oh, oh-oh
  Oh-oh
- Oh-oh "
+ Oh-oh ",2QA3IixpRcKyOdG7XDzRgv,https://open.spotify.com/track/2QA3IixpRcKyOdG7XDzRgv
 a perfectly good heart,Taylor Swift,-4,-8,-2,-3,-1,2,-2,-2,-2,-2,"Why would you wanna break
  A perfectly good heart?
  Why would you wanna take
@@ -331,7 +331,7 @@ a perfectly good heart,Taylor Swift,-4,-8,-2,-3,-1,2,-2,-2,-2,-2,"Why would you 
  Why would you wanna break
  A perfectly good heart?
  
- Mmm-hmm "
+ Mmm-hmm ",1spLfUJxtyVyiKKTegQ2r4,https://open.spotify.com/track/1spLfUJxtyVyiKKTegQ2r4
 picture to burn,Taylor Swift,4,-9,3,1,-3,3,-3,-3,0,-3,"State the obvious, I didn't get my perfect fantasy
  I realize you love yourself more than you could ever love me
  So go and tell your friends that I'm obsessive and crazy
@@ -367,7 +367,7 @@ picture to burn,Taylor Swift,4,-9,3,1,-3,3,-3,-3,0,-3,"State the obvious, I didn
  
  Burn, burn, burn, baby, burn
  You're just another picture to burn
- Baby, burn "
+ Baby, burn ",32mVHdy0bi1XKgr0ajsBlG,https://open.spotify.com/track/32mVHdy0bi1XKgr0ajsBlG
 a place in this world,Taylor Swift,2,-2,1,0,1,0,0,0,0,-2,"I don't know what I want, so don't ask me
  'Cause I'm still trying to figure it out
  Don't know what's down this road, I'm just walking
@@ -400,7 +400,7 @@ a place in this world,Taylor Swift,2,-2,1,0,1,0,0,0,0,-2,"I don't know what I wa
  
  Oh, I'm just a girl
  Oh, I'm just a girl, oh, oh
- Oh, I'm just a girl "
+ Oh, I'm just a girl ",73OX8GdpOeGzKC6OvGSbsv,https://open.spotify.com/track/73OX8GdpOeGzKC6OvGSbsv
 should've said no,Taylor Swift,-5,-6,0,-2,-3,0,-2,-3,2,-3,"It's strange to think the songs we used to sing
  The smiles, the flowers, everything is gone
  Yesterday, I found out about you
@@ -456,7 +456,7 @@ should've said no,Taylor Swift,-5,-6,0,-2,-3,0,-2,-3,2,-3,"It's strange to think
  I shouldn't be asking myself why
  You shouldn't be begging for forgiveness at my feet
  You should've said no
- Baby, and you might still have me "
+ Baby, and you might still have me ",16MVSD0mGI4RMQT83Qzm69,https://open.spotify.com/track/16MVSD0mGI4RMQT83Qzm69
 stay beautiful,Taylor Swift,3,1,0,1,0,2,0,0,0,1,"Cory's eyes are like a jungle
  He smiles, it's like the radio
  He whispers songs into my window
@@ -509,7 +509,7 @@ stay beautiful,Taylor Swift,3,1,0,1,0,2,0,0,0,1,"Cory's eyes are like a jungle
  Oh-oh-oh-oh
  Oh, but if it don't
  Stay beautiful, stay beautiful
- Na-na-na, na-na "
+ Na-na-na, na-na ",2ZoOmCSgj0ypVAmGd1ve4y,https://open.spotify.com/track/2ZoOmCSgj0ypVAmGd1ve4y
 teardrops on my guitar,Taylor Swift,-3,-4,1,-1,-3,0,0,0,-1,-3,"Drew looks at me
  I fake a smile so he won't see
  That I want and I'm needing
@@ -552,7 +552,7 @@ teardrops on my guitar,Taylor Swift,-3,-4,1,-1,-3,0,0,0,-1,-3,"Drew looks at me
  He's the time taken up, but there's never enough
  And he's all that I need to fall into
  Drew looks at me
- I fake a smile, so he won't see "
+ I fake a smile, so he won't see ",4pJi1rVt9GNegU9kywjg4z,https://open.spotify.com/track/4pJi1rVt9GNegU9kywjg4z
 tied together with a smile,Taylor Swift,-7,-6,-3,-3,-1,0,-2,0,-2,-2,"Seems the only one who doesn't see your beauty
  Is the face in the mirror looking back at you
  You walk around here thinking you're not pretty
@@ -595,7 +595,7 @@ tied together with a smile,Taylor Swift,-7,-6,-3,-3,-1,0,-2,0,-2,-2,"Seems the o
  But you're coming undone, oh, oh-oh
  Goodbye, baby
  With a smile, baby, baby
- Oh "
+ Oh ",6K0CJLVXqbGMeJSmJ4ENKK,https://open.spotify.com/track/6K0CJLVXqbGMeJSmJ4ENKK
 tim mcgraw,Taylor Swift,-1,-2,0,-1,0,0,-1,0,0,-1,"He said the way my blue eyes shined
  Put those Georgia stars to shame that night
  I said, ""That's a lie""
@@ -656,7 +656,7 @@ tim mcgraw,Taylor Swift,-1,-2,0,-1,0,0,-1,0,0,-1,"He said the way my blue eyes s
  Oh, think of me, mmm
  He said the way my blue eyes shined
  Put those Georgia stars to shame that night
- I said, ""That's a lie"" "
+ I said, ""That's a lie"" ",0Om9WAB5RS09L80DyOfTNa,https://open.spotify.com/track/0Om9WAB5RS09L80DyOfTNa
 beautiful eyes,Fearless,2,-2,0,1,1,0,0,0,0,-2,"Your beautiful eyes
  Stare right into mine
  And sometimes, I think of you late at night
@@ -693,7 +693,7 @@ beautiful eyes,Fearless,2,-2,0,1,1,0,0,0,0,-2,"Your beautiful eyes
  Dream about your eyes
  
  Ah, ah
- Beautiful eyes "
+ Beautiful eyes ",4aBW31cmkA7BLColUsMEeZ,https://open.spotify.com/track/4aBW31cmkA7BLColUsMEeZ
 breathe,Fearless,-7,1,-3,-3,-3,2,-1,-1,0,3,"I see your face in my mind as I drive away
  'Cause none of us thought it was gonna end that way
  People are people and sometimes we change our minds
@@ -740,7 +740,7 @@ breathe,Fearless,-7,1,-3,-3,-3,2,-1,-1,0,3,"I see your face in my mind as I driv
  Breathe without you, but I have to
  
  I'm sorry, I'm sorry (Mmm), I'm sorry (Yeah, yeah), I'm sorry
- I'm sorry, I'm sorry (Ooh), I'm sorry "
+ I'm sorry, I'm sorry (Ooh), I'm sorry ",-,-
 change,Fearless,7,0,3,1,3,0,-1,0,0,1,"Well, it's a sad picture, the final blow hits ya
  Somebody else gets what you wanted again and
  You know it’s all the same, another time and place
@@ -779,7 +779,7 @@ change,Fearless,7,0,3,1,3,0,-1,0,0,1,"Well, it's a sad picture, the final blow h
  It's a revolution, throw your hands up 'cause we never gave in
  And we'll sing hallelujah, we sang hallelujah, oh
  
- Hallelujah "
+ Hallelujah ",1yACRKAwlXWhXXFUSkvzhD,https://open.spotify.com/track/1yACRKAwlXWhXXFUSkvzhD
 come in with the rain,Fearless,-1,-3,0,-2,1,0,-1,0,0,-2,"I could go back to every laugh
  But I don't wanna go there anymore
  And I know all the steps up to your door
@@ -818,7 +818,7 @@ come in with the rain,Fearless,-1,-3,0,-2,1,0,-1,0,0,-2,"I could go back to ever
  That you'll come in with the rain
  
  I could go back to every laugh
- But I don't wanna go there anymore "
+ But I don't wanna go there anymore ",1n2wszmJyVkw6FHqyLnQsY,https://open.spotify.com/track/1n2wszmJyVkw6FHqyLnQsY
 fearless,Fearless,7,7,3,3,1,0,1,2,2,2,"There's somethin' 'bout the way
  The street looks when it's just rained
  There's a glow off the pavement
@@ -867,7 +867,7 @@ fearless,Fearless,7,7,3,3,1,0,1,2,2,2,"There's somethin' 'bout the way
  And I don't know why, but with you, I'd dance
  In a storm, in my best dress, fearless
  Oh-oh
- Oh-oh, yeah "
+ Oh-oh, yeah ",6Eu31gddWw0gOGO506pJYA,https://open.spotify.com/track/6Eu31gddWw0gOGO506pJYA
 fifteen,Fearless,2,-4,1,0,1,0,-1,-1,-1,-1,"You take a deep breath and you walk through the doors
  It's the mornin' of your very first day
  You say hi to your friends you ain't seen in a while
@@ -925,7 +925,7 @@ fifteen,Fearless,2,-4,1,0,1,0,-1,-1,-1,-1,"You take a deep breath and you walk t
  
  Your very first day
  Take a deep breath, girl
- Take a deep breath as you walk through the doors "
+ Take a deep breath as you walk through the doors ",4t0OI7XrODjSkAu3bTPmWj,https://open.spotify.com/track/4t0OI7XrODjSkAu3bTPmWj
 forever & always,Fearless,-4,-8,-1,-2,-3,2,-3,-2,-2,-1,"Once upon a time
  I believe it was a Tuesday when I caught your eye
  And we caught onto somethin'
@@ -982,7 +982,7 @@ forever & always,Fearless,-4,-8,-1,-2,-3,2,-3,-2,-2,-1,"Once upon a time
  It rains when you're here and it rains when you're gone
  'Cause I was there when you said, ""Forever and always""
  You didn't mean it, baby
- You said, ""Forever and always,"" yeah "
+ You said, ""Forever and always,"" yeah ",47HtKpfzpAt8rQjjXWotFj,https://open.spotify.com/track/47HtKpfzpAt8rQjjXWotFj
 hey stephen,Fearless,8,0,3,3,2,0,0,1,0,-1,"Mmm, mmm
  Mmm, mmm
  Mmm, yeah
@@ -1049,7 +1049,7 @@ hey stephen,Fearless,8,0,3,3,2,0,0,1,0,-1,"Mmm, mmm
  Mmm, I can't help myself
  I can't help myself, oh-oh-oh
  Mmm, mmm
- Mmm, mmm, mmm "
+ Mmm, mmm, mmm ",4WXzzCof26KJLTK5kK53dS,https://open.spotify.com/track/4WXzzCof26KJLTK5kK53dS
 i heart ?,Fearless,5,-10,2,-1,2,2,-2,-3,-3,-2,"Wish I had concentrated
  They said love was complicated
  But it's something I just fell into
@@ -1104,7 +1104,7 @@ i heart ?,Fearless,5,-10,2,-1,2,2,-2,-3,-3,-2,"Wish I had concentrated
  
  Written on the back of my hand
  An ""I heart question mark,"" yeah
- Written on the back of my hand "
+ Written on the back of my hand ",-,https://open.spotify.com/episode/7xxDGCQF4QwnXiH8nW0sqd?si=e9b19cd11f00442e
 jump then fall,Fearless,4,0,0,2,2,0,0,0,0,0,"I like the way you sound in the mornin'
  We're on the phone and without a warnin'
  I realize your laugh is the best sound
@@ -1165,7 +1165,7 @@ jump then fall,Fearless,4,0,0,2,2,0,0,0,0,0,"I like the way you sound in the mor
  And every time you're here
  Baby, I'll show you, I'll show you
  You can jump, then fall, jump, then fall
- Jump, then fall into me, into me, yeah "
+ Jump, then fall into me, into me, yeah ",2m3ObD945KvpE5y9A1eUWm,https://open.spotify.com/track/2m3ObD945KvpE5y9A1eUWm
 love story,Fearless,8,10,1,2,3,2,3,3,3,1,"We were both young when I first saw you
  I close my eyes and the flashback starts
  I'm standing there
@@ -1222,7 +1222,7 @@ love story,Fearless,8,10,1,2,3,2,3,3,3,1,"We were both young when I first saw yo
  It's a love story, baby, just say, 'Yes'""
  Oh, oh, oh
  Oh, oh, oh
- 'Cause we were both young when I first saw you "
+ 'Cause we were both young when I first saw you ",1vrd6UOGamcKNGnSHJQlSt,https://open.spotify.com/track/1vrd6UOGamcKNGnSHJQlSt
 the other side of the door,Fearless,-7,-3,-2,-2,-3,0,-2,0,0,-1,"In the heat of the fight, I walked away
  Ignorin' words that you were sayin', tryna make me stay
  I said, ""This time I've had enough""
@@ -1276,7 +1276,7 @@ the other side of the door,Fearless,-7,-3,-2,-2,-3,0,-2,0,0,-1,"In the heat of t
  And I broke down cryin', was she worth this mess?
  After everything and that little black dress
  After everything, I must confess
- I need you "
+ I need you ",1cSFlSBdpT4F5vb1frQ231,https://open.spotify.com/track/1cSFlSBdpT4F5vb1frQ231
 superstar,Fearless,-4,-7,-1,-1,-2,0,0,-3,-1,-3,"This is wrong, but I can't help but feel like
  There ain't nothin' more right, babe
  Misty mornin' comes again and I can't
@@ -1325,7 +1325,7 @@ superstar,Fearless,-4,-7,-1,-1,-2,0,0,-3,-1,-3,"This is wrong, but I can't help 
  Give me a photograph to hang on my wall
  Superstar
  Sweet, sweet superstar
- Superstar "
+ Superstar ",14Bljc3pOOG0xQX3wqhLN9,https://open.spotify.com/track/14Bljc3pOOG0xQX3wqhLN9
 tell me why,Fearless,-7,-7,-1,-3,-3,0,-2,-2,-1,-2,"I took a chance, I took a shot
  And you might think I'm bulletproof, but I'm not
  You took a swing, I took it hard
@@ -1378,7 +1378,7 @@ tell me why,Fearless,-7,-7,-1,-3,-3,0,-2,-2,-1,-2,"I took a chance, I took a sho
  Tell me why, oh
  
  I take a step back, I let you go
- I told you I'm not bulletproof, now you know "
+ I told you I'm not bulletproof, now you know ",4XrP7vKBjKLEYlRZdb0Ygr,https://open.spotify.com/track/4XrP7vKBjKLEYlRZdb0Ygr
 untouchable,Fearless,2,1,0,1,1,0,1,0,1,-1,"Untouchable like a distant diamond sky
  I'm reachin' out and I just can't tell you why
  I'm caught up in you, I'm caught up in you
@@ -1436,7 +1436,7 @@ untouchable,Fearless,2,1,0,1,1,0,1,0,1,-1,"Untouchable like a distant diamond sk
  Oh, oh, oh, oh
  
  It's like a million little stars spellin' out your name
- Spellin' out your name, oh "
+ Spellin' out your name, oh ",2IZ00ed83ygPIiacYScWUE,https://open.spotify.com/track/2IZ00ed83ygPIiacYScWUE
 the way i loved you,Fearless,2,-4,0,-1,1,2,-1,0,0,-3,"He is sensible and so incredible
  And all my single friends are jealous
  He says everything I need to hear
@@ -1491,7 +1491,7 @@ the way i loved you,Fearless,2,-4,0,-1,1,2,-1,0,0,-3,"He is sensible and so incr
  Oh, and that's the way I loved you
  Oh, oh, oh-woah, oh, oh, oh-woah
  Never knew I could feel that much
- That's the way I loved you "
+ That's the way I loved you ",5P4wWhUYWM0IaVYLuZxdar,https://open.spotify.com/track/5P4wWhUYWM0IaVYLuZxdar
 white horse,Fearless,-9,-5,-3,-3,-3,0,-2,-3,3,-3,"Say you're sorry, that face of an angel
  Comes out just when you need it to
  As I paced back and forth all this time
@@ -1538,7 +1538,7 @@ white horse,Fearless,-9,-5,-3,-3,-3,0,-2,-3,3,-3,"Say you're sorry, that face of
  
  Oh, woah, woah, woah
  Try and catch me now, oh
- It's too late to catch me now "
+ It's too late to catch me now ",6wn61Fzx9XMxQmieLpoIhW,https://open.spotify.com/track/6wn61Fzx9XMxQmieLpoIhW
 you belong with me,Fearless,0,4,-1,-2,1,2,0,2,3,-1,"You're on the phone with your girlfriend, she's upset
  She's goin' off about something that you said
  'Cause she doesn't get your humor like I do
@@ -1590,7 +1590,7 @@ you belong with me,Fearless,0,4,-1,-2,1,2,0,2,3,-1,"You're on the phone with you
  You belong with me, you belong with me
  You belong with me
  Have you ever thought, just maybe you belong with me?
- You belong with me "
+ You belong with me ",3GCL1PydwsLodcpv0Ll1ch,https://open.spotify.com/track/3GCL1PydwsLodcpv0Ll1ch
 you're not sorry,Fearless,-7,-6,-1,-3,-3,0,-2,-3,1,-2,"All this time, I was wastin', hopin' you would come around
  I've been givin' out chances every time and all you do is let me down
  And it's taken me this long, baby, but I've figured you out
@@ -1640,7 +1640,7 @@ you're not sorry,Fearless,-7,-6,-1,-3,-3,0,-2,-3,1,-2,"All this time, I was wast
  No, no, no, no
  Woah, oh, oh, oh, oh, oh, oh
  Oh, oh, oh, no, no, no
- No, no "
+ No, no ",0HmCuN0Z3OX1Qrz43FLOPL,https://open.spotify.com/track/0HmCuN0Z3OX1Qrz43FLOPL
 back to december,Speak Now,-6,-7,-3,-3,-2,2,-2,-1,-2,-2,"I'm so glad you made time to see me
  How's life? Tell me, how's your family?
  I haven't seen them in a while
@@ -1697,7 +1697,7 @@ back to december,Speak Now,-6,-7,-3,-3,-2,2,-2,-1,-2,-2,"I'm so glad you made ti
  I go back to December, turn around and make it alright
  I go back to December, turn around and change my own mind
  I go back to December all the time
- All the time "
+ All the time ",7lxADouiWFkwR7ZV2GKUcH,https://open.spotify.com/track/7lxADouiWFkwR7ZV2GKUcH
 better than revenge,Speak Now,-4,-8,2,-3,-3,0,-3,-2,0,-3,"Now, go stand in the corner and think about what you did (Ha)
  Haha, time for a little revenge
  
@@ -1761,7 +1761,7 @@ better than revenge,Speak Now,-4,-8,2,-3,-3,0,-3,-2,0,-3,"Now, go stand in the c
  (So much better, yeah?)
  See, you deserve some applause
  'Cause you're so much better
- She took him faster than you could say ""Sabotage"" "
+ She took him faster than you could say ""Sabotage"" ",1By2VQkUN0Frd8mKNV5NYC,https://open.spotify.com/track/1By2VQkUN0Frd8mKNV5NYC
 dear john,Speak Now,-7,-10,-2,-2,-3,0,-2,-3,-3,-2,"Long were the nights when
  My days once revolved around you
  Counting my footsteps
@@ -1815,7 +1815,7 @@ dear john,Speak Now,-7,-10,-2,-2,-3,0,-2,-3,-3,-2,"Long were the nights when
  You should've known
  You should've known
  Don't you think I was too young?
- You should've known "
+ You should've known ",1ubvV5ECkm6nSI6g1HmbBK,https://open.spotify.com/track/1ubvV5ECkm6nSI6g1HmbBK
 enchanted,Speak Now,5,-1,1,1,1,2,0,0,0,-1,"There I was again tonight
  Forcing laughter, faking smiles
  Same old tired, lonely place
@@ -1879,7 +1879,7 @@ enchanted,Speak Now,5,-1,1,1,1,2,0,0,0,-1,"There I was again tonight
  Wonderin' if you knew
  I was enchanted to meet you
  Please, don't be in love with someone else
- Please, don't have somebody waiting on you "
+ Please, don't have somebody waiting on you ",14LtANuaslKWyYbktUrHBU,https://open.spotify.com/track/14LtANuaslKWyYbktUrHBU
 haunted,Speak Now,-3,-10,0,-3,-2,2,-3,-2,-3,-2,"You and I walk a fragile line
  I have known it all this time
  But I never thought I'd live to see it break
@@ -1937,7 +1937,7 @@ haunted,Speak Now,-3,-10,0,-3,-2,2,-3,-2,-3,-2,"You and I walk a fragile line
  You and I walk a fragile line
  I have known it all this time
  Never ever thought I'd see it break
- Never thought I'd see it "
+ Never thought I'd see it ",11UaQaEp2LvdspTyyuE3ur,https://open.spotify.com/track/11UaQaEp2LvdspTyyuE3ur
 if this was a movie,Speak Now,-4,-6,-2,-2,-2,2,-2,0,-2,-2,"Last night, I heard my own heart beating
  Sounded like footsteps on my stairs
  Six months gone and I'm still reaching
@@ -1994,7 +1994,7 @@ if this was a movie,Speak Now,-4,-6,-2,-2,-2,2,-2,0,-2,-2,"Last night, I heard m
  Baby, what about the ending?
  Oh, I thought you'd be here by now
  Oh, oh, oh, oh, oh, oh
- Thought you'd be here by now "
+ Thought you'd be here by now ",0vvt4IZOMkRug195S4MUq0,https://open.spotify.com/track/0vvt4IZOMkRug195S4MUq0
 last kiss,Speak Now,-2,-4,0,-1,-1,0,-1,-2,0,-1,"I still remember the look on your face
  Lit through the darkness at 1:58
  The words that you whispered for just us to know
@@ -2054,7 +2054,7 @@ last kiss,Speak Now,-2,-4,0,-1,-1,0,-1,-2,0,-1,"I still remember the look on you
  Just like our last kiss
  Forever the name on my lips
  Forever the name on my lips
- Just like our last "
+ Just like our last ",1D27z8xNzjW0Mwwt1NCWhJ,https://open.spotify.com/track/1D27z8xNzjW0Mwwt1NCWhJ
 long live,Speak Now,5,1,2,2,1,0,0,0,0,1,"I said, ""Remember this moment""
  In the back of my mind
  The time we stood with our shaking hands
@@ -2119,7 +2119,7 @@ long live,Speak Now,5,1,2,2,1,0,0,0,0,1,"I said, ""Remember this moment""
  I had the time of my life fighting dragons with you
  And long, long live that look on your face
  And bring on all the pretenders
- One day, we will be remembered "
+ One day, we will be remembered ",7DjCRhhFo9PPzca1BjMLcf,https://open.spotify.com/track/7DjCRhhFo9PPzca1BjMLcf
 mean,Speak Now,6,-7,1,0,2,3,-3,-3,0,-1,"You, with your words like knives
  And swords and weapons that you use against me
  You have knocked me off my feet again
@@ -2182,7 +2182,7 @@ mean,Speak Now,6,-7,1,0,2,3,-3,-3,0,-1,"You, with your words like knives
  Someday, I'll be big enough so you can't hit me
  (Why you gotta be so mean?)
  And all you're ever gonna be is mean
- Why you gotta be so mean? "
+ Why you gotta be so mean? ",4N60XfcTE1ysLZGbYgnYXq,https://open.spotify.com/track/4N60XfcTE1ysLZGbYgnYXq
 mine,Speak Now,6,10,1,2,1,2,3,3,3,1,"Oh-oh, oh-oh
  Oh-oh, oh-oh
  
@@ -2242,7 +2242,7 @@ mine,Speak Now,6,10,1,2,1,2,3,3,3,1,"Oh-oh, oh-oh
  Yes, yes, do you believe it? (Hold on)
  Yes, yes, we're gonna make it now (Hold on)
  Yes, yes, I can see it
- Yes, yes, I can see it now "
+ Yes, yes, I can see it now ",6LZaxlycSWrJZ4Volb25qx,https://open.spotify.com/track/6LZaxlycSWrJZ4Volb25qx
 ours,Speak Now,9,6,3,1,3,2,2,2,3,-1,"Elevator buttons and morning air
  Strangers' silence makes me want to take the stairs
  If you were here, we'd laugh about their vacant stares
@@ -2286,7 +2286,7 @@ ours,Speak Now,9,6,3,1,3,2,2,2,3,-1,"Elevator buttons and morning air
  But they can't take what's ours
  They can't take what's ours
  The stakes are high, the water's rough
- But this love is ours "
+ But this love is ours ",1EQn3Uc5AyUXoiPLeyCrrg,https://open.spotify.com/track/1EQn3Uc5AyUXoiPLeyCrrg
 sparks fly,Speak Now,8,3,2,2,2,2,1,1,0,1,"The way you move is like a full on rainstorm and I'm a house of cards
  You're the kind of reckless that should send me runnin'
  But I kinda know that I won't get far
@@ -2328,7 +2328,7 @@ sparks fly,Speak Now,8,3,2,2,2,2,1,1,0,1,"The way you move is like a full on rai
  
  And the sparks fly
  Oh, baby, smile
- And the sparks fly "
+ And the sparks fly ",1q8E1FfFuhd12c5JcJwPxQ,https://open.spotify.com/track/1q8E1FfFuhd12c5JcJwPxQ
 speak now,Speak Now,8,4,3,0,3,2,0,2,3,-1,"I am not the kind of girl
  Who should be rudely bargin' in on a white veil occasion
  But you are not the kind of boy
@@ -2397,7 +2397,7 @@ speak now,Speak Now,8,4,3,0,3,2,0,2,3,-1,"I am not the kind of girl
  Of my tux, at the back door
  Baby, I didn't say my vows (Say a single vow)
  So glad you were around
- When they said, 'Speak now'"" "
+ When they said, 'Speak now'"" ",1nYWTzy5zu3zEPNgB1sItW,https://open.spotify.com/track/1nYWTzy5zu3zEPNgB1sItW
 the story of us,Speak Now,-3,-6,-1,-2,-2,2,-1,-2,-2,-1,"I used to think, one day, we'd tell the story of us
  How we met and the sparks flew instantly
  And people would say, ""They're the lucky ones""
@@ -2463,7 +2463,7 @@ the story of us,Speak Now,-3,-6,-1,-2,-2,2,-1,-2,-2,-1,"I used to think, one day
  'Cause we're going down
  And the story of us looks a lot like a tragedy now
  
- The end "
+ The end ",19tHCfzUSoy5HkpxcmbA0A,https://open.spotify.com/track/19tHCfzUSoy5HkpxcmbA0A
 superman,Speak Now,1,-2,-1,-1,1,2,1,0,0,-3,"Tall, dark, and superman
  He puts papers in his briefcase and drives away
  To save the world or go to work
@@ -2523,7 +2523,7 @@ superman,Speak Now,1,-2,-1,-1,1,2,1,0,0,-3,"Tall, dark, and superman
  When you come back down
  La, la, la, la, la, la
  La, la, la, la, la, la
- When you come back down "
+ When you come back down ",2R7C9dDqv1UPycvepBFziA,https://open.spotify.com/track/2R7C9dDqv1UPycvepBFziA
 22,Red,2,-1,0,1,1,0,0,0,0,-1,"It feels like a perfect night
  To dress up like hipsters
  And make fun of our exes
@@ -2610,7 +2610,7 @@ superman,Speak Now,1,-2,-1,-1,1,2,1,0,0,-3,"Tall, dark, and superman
  It feels like one of those nights (Twenty-two)
  You look like bad news
  I gotta have you
- I gotta have you "
+ I gotta have you ",3yII7UwgLF6K5zW3xad3MP,https://open.spotify.com/track/3yII7UwgLF6K5zW3xad3MP
 all too well,Red,-6,-7,-1,-2,-3,0,-2,-2,-2,-1,"I walked through the door with you, the air was cold
  But something 'bout it felt like home somehow
  And I left my scarf there at your sister's house
@@ -2676,7 +2676,7 @@ all too well,Red,-6,-7,-1,-2,-3,0,-2,-2,-2,-1,"I walked through the door with yo
  Down the stairs, you were there
  You remember it all
  It was rare, I was there
- I remember it all too well "
+ I remember it all too well ",1q3RiD1tIWUpGsNFADMlvl,https://open.spotify.com/track/1q3RiD1tIWUpGsNFADMlvl
 begin again,Red,2,7,-1,1,2,0,2,2,2,1,"Took a deep breath in the mirror
  He didn't like it when I wore high heels, but I do
  Turn the lock and put my headphones on
@@ -2717,7 +2717,7 @@ begin again,Red,2,7,-1,1,2,0,2,2,2,1,"Took a deep breath in the mirror
  Thinkin' all love ever does is break and burn and end
  But on a Wednesday in a café, I watched it begin again
  
- On a Wednesday in a café, I watched it begin again "
+ On a Wednesday in a café, I watched it begin again ",48A0aShHlovDfTMucMrE66,https://open.spotify.com/track/48A0aShHlovDfTMucMrE66
 come back...be here,Red,-6,-2,-3,-1,-2,0,0,-1,2,-3,"You said it in a simple way
  4 AM, the second day
  How strange that I don't know you at all
@@ -2781,7 +2781,7 @@ come back...be here,Red,-6,-2,-3,-1,-2,0,0,-1,2,-3,"You said it in a simple way
  Oh, oh
  
  Come back, be here
- Come back, be here "
+ Come back, be here ",4pNApnaUWAL2J4KO2eqokq,https://open.spotify.com/track/4pNApnaUWAL2J4KO2eqokq
 everything has changed,Red,9,8,3,3,3,0,1,2,3,2,"You good to go?
  
  All I knew this mornin' when I woke
@@ -2859,7 +2859,7 @@ everything has changed,Red,9,8,3,3,3,0,1,2,3,2,"You good to go?
  All I know is a new found grace
  All my days, I'll know your face
  All I know since yesterday, yeah
- Is everything has changed "
+ Is everything has changed ",7gdwoOmi258QJq0hmQ4hto,https://open.spotify.com/track/7gdwoOmi258QJq0hmQ4hto
 girl at home,Red,5,-3,2,-2,3,2,0,-3,1,-1,"Don't look at me, you got a girl at home
  And everybody knows that, everybody knows that, ah-ah
  Don’t look at me, you got a girl at home
@@ -2924,7 +2924,7 @@ girl at home,Red,5,-3,2,-2,3,2,0,-3,1,-1,"Don't look at me, you got a girl at ho
  And everybody knows that, everybody knows that
  
  It would be a fine proposition
- If I hadn't once been just like her "
+ If I hadn't once been just like her ",0DMVrlMUn01M0IcpDbwgu7,https://open.spotify.com/track/0DMVrlMUn01M0IcpDbwgu7
 holy ground,Red,2,-5,0,0,0,2,-1,-3,0,-1,"I was reminiscing just the other day
  While havin' coffee all alone and, Lord, it took me away
  Back to a first-glance feelin' on New York time
@@ -2979,7 +2979,7 @@ holy ground,Red,2,-5,0,0,0,2,-1,-3,0,-1,"I was reminiscing just the other day
  Tonight, I'm gonna dance (Ooh-ayy, ooh-ayy)
  Like you were in this room (Ooh-ayy, oh-woah)
  But I don't wanna dance (Ooh-ayy, ooh-ayy)
- If I'm not dancin' with you "
+ If I'm not dancin' with you ",7J4b3LVCIGO4CMBDFLPoP6,https://open.spotify.com/track/7J4b3LVCIGO4CMBDFLPoP6
 i almost do,Red,-3,-6,-2,-3,0,2,-2,-2,0,-2,"I bet, this time of night, you're still up
  I bet you're tired from a long, hard week
  I bet you're sittin' in your chair by the window lookin' out at the city
@@ -3025,7 +3025,7 @@ i almost do,Red,-3,-6,-2,-3,0,2,-2,-2,0,-2,"I bet, this time of night, you're st
  I bet, this time of night, you’re still up
  I bet you're tired from a long, hard week
  I bet you're sittin' in your chair by the window lookin' out at the city
- And I hope sometimes you wonder 'bout me "
+ And I hope sometimes you wonder 'bout me ",31pEV5lPJi7btskZoUr2yu,https://open.spotify.com/track/31pEV5lPJi7btskZoUr2yu
 i knew you were trouble,Red,-12,-9,-3,-3,-3,-3,-3,-3,0,-3,"Once upon a time, a few mistakes ago
  I was in your sights, you got me alone
  You found me, you found me, you found me-e-e-e-e
@@ -3095,7 +3095,7 @@ i knew you were trouble,Red,-12,-9,-3,-3,-3,-3,-3,-3,0,-3,"Once upon a time, a f
  'Cause I knew you were trouble when you walked in
  Trouble, trouble, trouble
  'Cause I knew you were trouble when you walked in
- Trouble, trouble, trouble "
+ Trouble, trouble, trouble ",6AtZLIzUINvExIUy4QhdjP,https://open.spotify.com/track/6AtZLIzUINvExIUy4QhdjP
 the last time,Red,-3,0,0,-1,-2,0,-2,0,3,-1,"I find myself at your door
  Just like all those times before
  I’m not sure how I got there
@@ -3155,7 +3155,7 @@ the last time,Red,-3,0,0,-1,-2,0,-2,0,3,-1,"I find myself at your door
  This is the last time I'm askin' you, last time I'm askin' you
  Last time I'm askin' you this
  This is the last time I'm askin' you, last time I'm askin' you
- Last time I'm askin' you this "
+ Last time I'm askin' you this ",7vvIpJZye5cRR6De1LKM0m,https://open.spotify.com/track/7vvIpJZye5cRR6De1LKM0m
 the lucky one,Red,-1,-2,-1,0,0,0,0,-1,0,-1,"New to town with a made-up name
  In the angel's city, chasin' fortune and fame
  And the camera flashes make it look like a dream
@@ -3205,7 +3205,7 @@ the lucky one,Red,-1,-2,-1,0,0,0,0,-1,0,-1,"New to town with a made-up name
  Yeah, they'll tell you now, you're the lucky one
  Let me tell you now, you're the lucky one
  Oh, oh, oh
- Oh, oh-woah, oh "
+ Oh, oh-woah, oh ",2wtHlpYSgC7xEdD3DrSHNL,https://open.spotify.com/track/2wtHlpYSgC7xEdD3DrSHNL
 the moment i knew,Red,-7,-5,-1,-3,-3,0,-3,0,0,-2,"You should've been there
  Should've burst through the door
  With that ""Baby, I'm right here"" smile
@@ -3274,7 +3274,7 @@ the moment i knew,Red,-7,-5,-1,-3,-3,0,-3,0,0,-2,"You should've been there
  You called me later
  And said, ""I'm sorry I didn't make it""
  And I said, ""I'm sorry too""
- And that was the moment I knew "
+ And that was the moment I knew ",0NRHj8hDwwmSPaA41o379r,https://open.spotify.com/track/0NRHj8hDwwmSPaA41o379r
 red,Red,-2,-2,-1,0,-1,0,-1,0,0,-1,"Loving him is like driving a new Maserati down a dead-end street
  Faster than the wind, passionate as sin, ending so suddenly
  Loving him is like trying to change your mind once you're already flying through the free fall
@@ -3320,7 +3320,7 @@ red,Red,-2,-2,-1,0,-1,0,-1,0,0,-1,"Loving him is like driving a new Maserati dow
  (Red, red)
  Yeah, yeah (Red, red)
  
- His love was like driving a new Maserati down a dead-end street "
+ His love was like driving a new Maserati down a dead-end street ",0cITLOYn1Sv4q27zZPqlNK,https://open.spotify.com/track/0cITLOYn1Sv4q27zZPqlNK
 sad beautiful tragic,Red,-7,-7,-2,-2,-3,0,-1,-3,-2,-1,"Long handwritten notes deep in your pocket
  Words, how little they mean when you're a little too late
  I stood right by the tracks, your face in a locket
@@ -3349,7 +3349,7 @@ sad beautiful tragic,Red,-7,-7,-2,-2,-3,0,-1,-3,-2,-1,"Long handwritten notes de
  What we had, a beautiful, magic love there
  What a sad, beautiful, tragic love affair
  We had a beautiful, magic love there
- What a sad, beautiful, tragic love affair "
+ What a sad, beautiful, tragic love affair ",5QKhg4r4Ibt0LVTmWEXTEg,https://open.spotify.com/track/5QKhg4r4Ibt0LVTmWEXTEg
 starlight,Red,6,9,-1,3,1,3,1,3,3,2,"I said, ""Oh my, what a marvelous tune""
  It was the best night, never would forget how he moved
  The whole place was dressed to the nines
@@ -3405,7 +3405,7 @@ starlight,Red,6,9,-1,3,1,3,1,3,3,2,"I said, ""Oh my, what a marvelous tune""
  Like starlight, starlight
  Like we dream impossible dreams
  Don't you see the starlight, starlight?
- Don't you dream impossible things? "
+ Don't you dream impossible things? ",0vqI4ZIMuifeKeItGiWbPj,https://open.spotify.com/track/0vqI4ZIMuifeKeItGiWbPj
 state of grace,Red,-1,-1,-1,-2,0,2,-1,0,0,0,"I'm walkin' fast through the traffic lights
  Busy streets and busy lives
  And all we know is touch and go
@@ -3455,7 +3455,7 @@ state of grace,Red,-1,-1,-1,-2,0,2,-1,0,0,0,"I'm walkin' fast through the traffi
  This is a state of grace
  This is the worthwhile fight
  Love is a ruthless game
- Unless you play it good and right "
+ Unless you play it good and right ",5zyCYmiaVE5y26EZuwZbsw,https://open.spotify.com/track/5zyCYmiaVE5y26EZuwZbsw
 stay stay stay,Red,5,8,-1,1,2,3,2,2,2,2,"I'm pretty sure we almost broke up last night
  I threw my phone across the room at you
  I was expecting some dramatic turn away
@@ -3502,7 +3502,7 @@ stay stay stay,Red,5,8,-1,1,2,3,2,2,2,2,"I'm pretty sure we almost broke up last
  You think that it's funny when I'm mad, mad, mad
  But I think that it's best if we both stay
  
- That's so fun "
+ That's so fun ",7eQj6r5PIdYKEIZjucBMcq,https://open.spotify.com/track/7eQj6r5PIdYKEIZjucBMcq
 treacherous,Red,4,1,1,1,2,0,1,0,0,0,"Put your lips close to mine
  As long as they don't touch
  Out of focus, eye to eye
@@ -3554,7 +3554,7 @@ treacherous,Red,4,1,1,1,2,0,1,0,0,0,"Put your lips close to mine
  I'll follow you, follow you home
  I'll follow you, follow you home
  This slope is treacherous
- I-I-I like it "
+ I-I-I like it ",0XfOV7qY3834QpFVwOb6CC,https://open.spotify.com/track/0XfOV7qY3834QpFVwOb6CC
 we are never ever getting back together,Red,3,-7,3,-2,2,0,-2,-3,1,-3,"I remember when we broke up the first time
  Sayin', ""This is it, I've had enough""
  'Cause, like, we hadn't seen each other in a month
@@ -3606,7 +3606,7 @@ we are never ever getting back together,Red,3,-7,3,-2,2,0,-2,-3,1,-3,"I remember
  We (Ooh), oh
  Gettin' back together (Ooh), yeah
  You go talk to your friends, talk to my friends, talk to me (Talk to me)
- But we are never, ever, ever, ever gettin' back together "
+ But we are never, ever, ever, ever gettin' back together ",5YqltLsjdqFtvqE7Nrysvs,https://open.spotify.com/track/5YqltLsjdqFtvqE7Nrysvs
 all you had to do was stay,1989,-4,-7,2,-3,-3,0,-3,-3,1,-2,"(Hey, hey, hey)
  (Hey, hey, hey)
  (Hey, hey, hey)
@@ -3676,7 +3676,7 @@ all you had to do was stay,1989,-4,-7,2,-3,-3,0,-3,-3,1,-2,"(Hey, hey, hey)
  All you had to do was (Stay, oh)
  All you had to do was (Stay)
  All you had to do was (Stay, ooh)
- All you had to do was (Stay) "
+ All you had to do was (Stay) ",2k0ZEeAqzvYMcx9Qt5aClQ,https://open.spotify.com/track/2k0ZEeAqzvYMcx9Qt5aClQ
 bad blood,1989,-1,-11,3,-3,-3,2,-3,-3,-3,-2,"'Cause, baby, now we got bad blood
  You know it used to be mad love
  So take a look what you've done
@@ -3752,7 +3752,7 @@ bad blood,1989,-1,-11,3,-3,-3,2,-3,-3,-3,-2,"'Cause, baby, now we got bad blood
  Now we got problems
  And I don't think we can solve them
  You made a really deep cut
- And, baby, now we got bad blood, hey "
+ And, baby, now we got bad blood, hey ",6qAcApH8obo8eqatCKUHd9,https://open.spotify.com/track/6qAcApH8obo8eqatCKUHd9
 blank space,1989,-1,-3,0,-1,0,0,-2,0,0,-1,"Nice to meet you, where you been?
  I could show you incredible things
  Magic, madness, heaven, sin
@@ -3838,7 +3838,7 @@ blank space,1989,-1,-3,0,-1,0,0,-2,0,0,-1,"Nice to meet you, where you been?
  Got a long list of ex-lovers
  They'll tell you I'm insane
  But I've got a blank space, baby
- And I'll write your name1K "
+ And I'll write your name1K ",2sC2P3BN0IXujNaaSyDmtP,https://open.spotify.com/track/2sC2P3BN0IXujNaaSyDmtP
 clean,1989,0,-7,0,0,0,0,-3,-3,0,-1,"The drought was the very worst, ah-ah, ah-ah
  When the flowers that we'd grown together died of thirst
  It was months and months of back and forth, ah-ah, ah-ah
@@ -3888,7 +3888,7 @@ clean,1989,0,-7,0,0,0,0,-3,-3,0,-1,"The drought was the very worst, ah-ah, ah-ah
  Finally clean
  Think I'm finally clean
  Ah-ah, ah-ah
- Think I'm finally clean "
+ Think I'm finally clean ",0lKUBmEyQfzsQHozyeXzES,https://open.spotify.com/track/0lKUBmEyQfzsQHozyeXzES
 how you get the girl,1989,3,2,0,1,0,2,-1,1,3,-1,"Oh, oh, oh
  Oh, oh, oh
  Oh-oh, oh-oh
@@ -3957,7 +3957,7 @@ how you get the girl,1989,3,2,0,1,0,2,-1,1,3,-1,"Oh, oh, oh
  (Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh)
  
  And that's how it works
- That's how you got the girl "
+ That's how you got the girl ",733OhaXQIHY7BKtY3vnSkn,https://open.spotify.com/track/733OhaXQIHY7BKtY3vnSkn
 i know places,1989,5,7,2,-2,3,2,3,2,0,2,"I-I-I-I, I-I-I-I
  I-I-I-I, I-I-I-I
  I-I-I-I, I-I-I-I, I-I (I, I)
@@ -4005,7 +4005,7 @@ i know places,1989,5,7,2,-2,3,2,3,2,0,2,"I-I-I-I, I-I-I-I
  (I) In the dead of night, your eyes so green (I know places)
  (Hide) And I know, for you, it's always me (I know places)
  I-I-I-I, I-I-I-I
- I-I-I-I, I-I-I-I (I, I) "
+ I-I-I-I, I-I-I-I (I, I) ",2zfgVd034GlUvk7LqBHl6u,https://open.spotify.com/track/2zfgVd034GlUvk7LqBHl6u
 i wish you would,1989,-2,-5,-2,-3,1,2,-1,0,-2,-2,"It's 2 AM in your car
  Windows down, you pass my street, the memories start
  You say, ""It's in the past,"" you drive straight ahead
@@ -4088,7 +4088,7 @@ i wish you would,1989,-2,-5,-2,-3,1,2,-1,0,-2,-2,"It's 2 AM in your car
  (I, I-I-I, I, I, I wish, I wish, I)
  I, I-I-I, I, I, I wish, I wish, I
  I, I-I-I, I, I, I wish, I wish, I
- I wish you would "
+ I wish you would ",1B5VzXPqMlvRw0U4HJY3dJ,https://open.spotify.com/track/1B5VzXPqMlvRw0U4HJY3dJ
 new romantics,1989,1,-2,0,-1,1,1,0,0,0,-2,"We're all bored, we're all so tired of everything
  We wait for trains that just aren't comin'
  We show off our different scarlet letters
@@ -4152,7 +4152,7 @@ new romantics,1989,1,-2,0,-1,1,1,0,0,0,-2,"We're all bored, we're all so tired o
  Heartbreak is the national anthem, we sing it proudly
  We are too busy dancin' (Hey) to get knocked off our feet
  Baby, we're the new romantics
- The best people in life are free "
+ The best people in life are free ",6rZVy6FIG7lSJQMFXHo12z,https://open.spotify.com/track/6rZVy6FIG7lSJQMFXHo12z
 out of the woods,1989,-1,-5,0,-2,1,0,-1,-3,0,-1,"Looking at it now
  It all seems so simple
  We were lying on your couch
@@ -4225,7 +4225,7 @@ out of the woods,1989,-1,-5,0,-2,1,0,-1,-3,0,-1,"Looking at it now
  Are we out of the woods yet? Are we out of the woods yet?
  Are we out of the woods yet? Are we out of the woods?
  Are we in the clear yet? Are we in the clear yet?
- Are we in the clear yet, in the clear yet? Good "
+ Are we in the clear yet, in the clear yet? Good ",6Nde5KuTXyB7jlPO4upaBo,https://open.spotify.com/track/6Nde5KuTXyB7jlPO4upaBo
 shake it off,1989,9,-2,3,2,2,2,0,0,0,-2,"I stay out too late
  Got nothin' in my brain
  That's what people say, mm-mm
@@ -4303,7 +4303,7 @@ shake it off,1989,9,-2,3,2,2,2,0,0,0,-2,"I stay out too late
  I shake it off, I shake it off
  I, I, I shake it off, I shake it off (You got to)
  I, I, I shake it off, I shake it off
- I, I, I shake it off, I shake it off "
+ I, I, I shake it off, I shake it off ",50yNTF0Od55qnHLxYsA5Pw,https://open.spotify.com/track/50yNTF0Od55qnHLxYsA5Pw
 style,1989,-4,2,-3,-1,0,0,-1,1,1,1,"Midnight
  You come and pick me up, no headlights
  A long drive
@@ -4354,7 +4354,7 @@ style,1989,-4,2,-3,-1,0,0,-1,1,1,1,"Midnight
  Oh, you got that James Dean daydream look in your eye
  And I got that red lip classic thing that you like
  And when we go crashing down (And when we go), we come back every time
- 'Cause we never go out of style, we never go out of style1K "
+ 'Cause we never go out of style, we never go out of style1K ",1fo2ctLqj3zBhRQKOXprol,https://open.spotify.com/track/1fo2ctLqj3zBhRQKOXprol
 this love,1989,-2,-2,-1,-1,0,0,-1,0,0,-1,"Clear blue water
  High tide came and brought you in
  And I could go on and on, on and on and I will
@@ -4411,7 +4411,7 @@ this love,1989,-2,-2,-1,-1,0,0,-1,0,0,-1,"Clear blue water
  (This love, this love, this love, this love, oh-oh, oh)
  (This love, this love, this love, this love, oh-oh, oh)
  (This love, this love, this love, this love)
- This love, this love came back to me, oh-oh, oh "
+ This love, this love came back to me, oh-oh, oh ",1kTPQnabROVkW9bUXdCGrB,https://open.spotify.com/track/1kTPQnabROVkW9bUXdCGrB
 welcome to new york,1989,4,7,0,2,0,2,1,2,2,2,"Walkin' through a crowd, the village is aglow
  Kaleidoscope of loud heartbeats under coats
  Everybody here wanted somethin' more
@@ -4456,7 +4456,7 @@ welcome to new york,1989,4,7,0,2,0,2,1,2,2,2,"Walkin' through a crowd, the villa
  Welcome to New York (New soundtrack), it's been waitin' for you
  Welcome to New York, the lights are so bright, but they never blind me
  Welcome to New York, so bright, they never blind me, yeah
- Welcome to New York, welcome to New York "
+ Welcome to New York, welcome to New York ",33Kq0AT5rvwyE4azisG08x,https://open.spotify.com/track/33Kq0AT5rvwyE4azisG08x
 wildest dreams,1989,1,-5,-1,0,0,2,-1,-2,1,-3,"He said, ""Let's get out of this town
  Drive out of the city, away from the crowds""
  I thought, ""Heaven can't help me now""
@@ -4526,7 +4526,7 @@ wildest dreams,1989,1,-5,-1,0,0,2,-1,-2,1,-3,"He said, ""Let's get out of this t
  In your wildest dreams, ah, ha
  Even if it's just in your
  In your wildest dreams, ah, ha
- In your wildest dreams, ah, ha "
+ In your wildest dreams, ah, ha ",27exgla7YBw9DUNNcTIpjy,https://open.spotify.com/track/27exgla7YBw9DUNNcTIpjy
 wonderland,1989,-5,0,-2,-2,-1,0,-1,-1,1,1,"Flashing lights
  And we took a wrong turn
  And we fell down a rabbit hole
@@ -4601,7 +4601,7 @@ wonderland,1989,-5,0,-2,-2,-1,0,-1,-1,1,1,"Flashing lights
  We found Wonderland, you and I got lost in it (Lost in it)
  (Eh, eh, eh, eh, eh)
  And life was never worse but never better
- In Wonderland "
+ In Wonderland ",6iWMI5oOhWrDbLbjmwTWFq,https://open.spotify.com/track/6iWMI5oOhWrDbLbjmwTWFq
 you are in love,1989,5,9,2,2,1,0,2,2,3,2,"One look, dark room, meant just for you
  Time moved too fast, you play it back
  Buttons on a coat, lighthearted joke
@@ -4653,7 +4653,7 @@ you are in love,1989,5,9,2,2,1,0,2,2,3,2,"One look, dark room, meant just for yo
  You can feel it on the way home (Way home), way home (Way home), you (Ah)
  You can see it with the lights out (Lights out), lights out (Lights out)
  You are in love, true love
- You are in love "
+ You are in love ",4UwqOWDpdeIDVQDuKT6iza,https://open.spotify.com/track/4UwqOWDpdeIDVQDuKT6iza
 ...ready for it?,Reputation,6,0,3,-1,2,2,1,0,0,-1,"Knew he was a killer first time that I saw him
  Wondered how many girls he had loved and left haunted
  But if he's a ghost, then I can be a phantom
@@ -4719,7 +4719,7 @@ you are in love,1989,5,9,2,2,1,0,2,2,3,2,"One look, dark room, meant just for yo
  Baby, let the games begin
  Let the games begin
  Let the games begin
- Are you ready for it? "
+ Are you ready for it? ",2yLa0QULdQr0qAIvVwN6B5,https://open.spotify.com/track/2yLa0QULdQr0qAIvVwN6B5
 call it what you want,Reputation,2,7,-2,0,2,2,2,2,3,0,"My castle crumbled overnight
  I brought a knife to a gunfight
  They took the crown, but it's alright
@@ -4798,7 +4798,7 @@ call it what you want,Reputation,2,7,-2,0,2,2,2,2,3,0,"My castle crumbled overni
  (Call it what you want, call it what you want, call it)
  (Call it what you want, call it what you want, call it)
  Call it what you want, yeah
- Call it what you want to "
+ Call it what you want to ",1GwMQaZz6Au3QLDbjbMdme,https://open.spotify.com/track/1GwMQaZz6Au3QLDbjbMdme
 dancing with our hands tied,Reputation,-5,1,-2,-2,-1,0,2,-1,0,0,"I, I loved you in secret
  First sight, yeah, we love without reason
  Oh, twenty-five years old
@@ -4869,7 +4869,7 @@ dancing with our hands tied,Reputation,-5,1,-2,-2,-1,0,2,-1,0,0,"I, I loved you 
  But we were dancin'
  
  Hands tied, hands tied
- (Dancin') "
+ (Dancin') ",7I7JbDv63ZJJsSi24DyJrz,https://open.spotify.com/track/7I7JbDv63ZJJsSi24DyJrz
 delicate,Reputation,-4,-2,-1,-2,1,-2,0,0,0,-2,"This ain't for the best
  My reputation's never been worse, so
  You must like me for me
@@ -4944,7 +4944,7 @@ delicate,Reputation,-4,-2,-1,-2,1,-2,0,0,0,-2,"This ain't for the best
  Is it cool that I said all that? (Isn't it?)
  Is it too soon to do this yet? (Isn't it? Isn't it?)
  'Cause I know that it's delicate
- Isn't it delicate? "
+ Isn't it delicate? ",6NFyWDv5CjfwuzoCkw47Xf,https://open.spotify.com/track/6NFyWDv5CjfwuzoCkw47Xf
 don't blame me,Reputation,-3,2,-3,-2,2,0,1,2,0,-1,"Don't blame me, love made me crazy
  If it doesn't, you ain't doin' it right
  Lord, save me, my drug is my baby
@@ -5014,7 +5014,7 @@ don't blame me,Reputation,-3,2,-3,-2,2,0,1,2,0,-1,"Don't blame me, love made me 
  Every time you're, every time you're lovin' me
  You're lovin' me
  Oh Lord, save me, my drug is my baby
- I'll be usin' for the rest of my life "
+ I'll be usin' for the rest of my life ",1R0a2iXumgCiFb7HEZ7gUE,https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE
 dress,Reputation,3,4,-1,1,1,2,1,2,0,1,"Our secret moments in a crowded room
  They got no idea about me and you
  There is an indentation in the shape of you
@@ -5086,7 +5086,7 @@ dress,Reputation,3,4,-1,1,1,2,1,2,0,1,"Our secret moments in a crowded room
  There is an indentation in the shape of you
  (Only bought this dress so you could take it off)
  You made your mark on me, golden tattoo
- (Only bought this dress so you could take it off) "
+ (Only bought this dress so you could take it off) ",6oVxXO5oQ4pTpO8RSnkzvv,https://open.spotify.com/track/6oVxXO5oQ4pTpO8RSnkzvv
 end game,Reputation,3,3,-1,0,2,2,2,0,0,1,"I wanna be your end game
  I wanna be your first string
  I wanna be your A-Team (Woah, woah)
@@ -5174,7 +5174,7 @@ end game,Reputation,3,3,-1,0,2,2,2,0,0,1,"I wanna be your end game
  I wanna be your end game (Oh, I do; End game)
  I wanna be your first string (First string)
  I wanna be your A-Team (A-Team)
- I wanna be your end game, end game "
+ I wanna be your end game, end game ",2x0WlnmfG39ZuDmstl9xfX,https://open.spotify.com/track/2x0WlnmfG39ZuDmstl9xfX
 getaway car,Reputation,-1,-5,-1,-2,0,2,-2,-3,0,0,"No, nothin' good starts in a getaway car
  
  It was the best of times, the worst of crimes
@@ -5255,7 +5255,7 @@ getaway car,Reputation,-1,-5,-1,-2,0,2,-2,-3,0,0,"No, nothin' good starts in a g
  Ridin' in a getaway car
  I was cryin' in a getaway car
  I was dyin' in a getaway car
- Said goodbye in a getaway car "
+ Said goodbye in a getaway car ",0VE4kBnHJUgtMf0dy6DRmW,https://open.spotify.com/track/0VE4kBnHJUgtMf0dy6DRmW
 gorgeous,Reputation,1,-4,3,0,-2,0,0,-1,0,-3,"Gorgeous
  
  You should take it as a compliment
@@ -5315,7 +5315,7 @@ gorgeous,Reputation,1,-4,3,0,-2,0,0,-1,0,-3,"Gorgeous
  You make me so happy it turns back to sad (Turns back to sad)
  There's nothin' I hate more than what I can't have (What I can't have)
  You are so gorgeous, it makes me so mad (Mm)
- You're gorgeous "
+ You're gorgeous ",1ZY1PqizIl78geGM4xWlEA,https://open.spotify.com/track/1ZY1PqizIl78geGM4xWlEA
 i did something bad,Reputation,-1,-2,3,-2,0,-2,-1,-2,2,-1,"I never trust a narcissist, but they love me
  So I play 'em like a violin
  And I make it look, oh, so easy
@@ -5390,7 +5390,7 @@ i did something bad,Reputation,-1,-2,3,-2,0,-2,-1,-2,2,-1,"I never trust a narci
  
  So good (Bad), why's it feel so good?
  Why's it feel, why's it feel so good? (Bad)
- It just felt so good, good "
+ It just felt so good, good ",4svZDCRz4cJoneBpjpx8DJ,https://open.spotify.com/track/4svZDCRz4cJoneBpjpx8DJ
 king of my heart,Reputation,7,5,2,2,1,2,1,2,1,1,"I'm perfectly fine, I live on my own
  I made up my mind, I'm better off bein' alone
  We met a few weeks ago
@@ -5462,7 +5462,7 @@ king of my heart,Reputation,7,5,2,2,1,2,1,2,1,1,"I'm perfectly fine, I live on m
  And all at once
  You are the one I have been waitin', waitin'
  Body and soul, woah
- And all at once "
+ And all at once ",7HuBDWi18s4aJM8UFnNheH,https://open.spotify.com/track/7HuBDWi18s4aJM8UFnNheH
 look what you made me do,Reputation,1,-11,3,-2,3,-3,-3,-3,-3,-2,"I don't like your little games
  Don't like your tilted stage
  The role you made me play
@@ -5542,7 +5542,7 @@ look what you made me do,Reputation,1,-11,3,-2,3,-3,-3,-3,-3,-2,"I don't like yo
  Ooh, look what you made me do
  Look what you made me do
  Look what you just made me do
- Look what you just made me do "
+ Look what you just made me do ",1P17dC1amhFzptugyAO7Il,https://open.spotify.com/track/1P17dC1amhFzptugyAO7Il
 new year's day,Reputation,2,4,0,-1,3,0,2,1,0,1,"There's glitter on the floor after the party
  Girls carryin’ their shoes down in the lobby
  Candle wax and Polaroids on the hardwood floor
@@ -5595,7 +5595,7 @@ new year's day,Reputation,2,4,0,-1,3,0,2,1,0,1,"There's glitter on the floor aft
  Please, don't ever become a stranger
  (Hold on to the memories, they will hold on to you)
  Whose laugh I could recognize anywhere
- (And I will hold on to you) "
+ (And I will hold on to you) ",7F5oktn5YOsR9eR5YsFtqb,https://open.spotify.com/track/7F5oktn5YOsR9eR5YsFtqb
 so it goes...,Reputation,-2,3,0,-2,0,0,1,0,1,1,"See you in the dark
  All eyes on you, my magician
  All eyes on us
@@ -5664,7 +5664,7 @@ so it goes...,Reputation,-2,3,0,-2,0,0,1,0,1,1,"See you in the dark
  Come here, dressed in black now
  So, so, so it goes
  Scratches down your back now
- So, so, so it goes "
+ So, so, so it goes ",5PxFv9yJEg9dxvbZggykro,https://open.spotify.com/track/5PxFv9yJEg9dxvbZggykro
 this is why we can't have nice things,Reputation,-8,-11,0,-2,-3,-3,-3,-3,-3,-2,"It was so nice throwin' big parties
  Jump into the pool from the balcony
  Everyone swimmin' in a champagne sea
@@ -5715,7 +5715,7 @@ this is why we can't have nice things,Reputation,-8,-11,0,-2,-3,-3,-3,-3,-3,-2,"
  Nice things (Oh, no), honey
  (They didn't care about that he-said, she-said)
  Did you think I wouldn't hear all the things you said about me?
- This is why we can't have nice things "
+ This is why we can't have nice things ",07NxDD1iKCHbAldceD7QLP,https://open.spotify.com/track/07NxDD1iKCHbAldceD7QLP
 afterglow,Lover,-6,-7,-3,-3,-2,2,-3,0,-2,-2,"I blew things out of proportion, now you're blue
  Put you in jail for something you didn’t do
  I pinned your hands behind your back, oh
@@ -5769,7 +5769,7 @@ afterglow,Lover,-6,-7,-3,-3,-2,2,-3,0,-2,-2,"I blew things out of proportion, no
  I don't wanna do, I don't wanna do this to you (Ooh)
  I don't wanna lose, I don't wanna lose this with you (Ooh)
  I need to say, hey, it's all me, just don't go
- Meet me in the afterglow "
+ Meet me in the afterglow ",1SymEzIT3H8UZfibCs3TYi,https://open.spotify.com/track/1SymEzIT3H8UZfibCs3TYi
 cornelia street,Lover,0,6,-1,0,1,0,2,2,3,-1,"We were in the backseat
  Drunk on something stronger than the drinks in the bar
  ""I rent a place on Cornelia Street""
@@ -5828,7 +5828,7 @@ cornelia street,Lover,0,6,-1,0,1,0,2,2,3,-1,"We were in the backseat
  I don't wanna lose you (Yeah)
  
  ""I rent a place on Cornelia Street""
- I say casually in the car "
+ I say casually in the car ",12M5uqx0ZuwkpLp5rJim1a,https://open.spotify.com/track/12M5uqx0ZuwkpLp5rJim1a
 cruel summer,Lover,-3,1,-1,-3,-1,2,2,-1,1,-1,"(Yeah, yeah, yeah, yeah)
  
  Fever dream high in the quiet of the night
@@ -5895,7 +5895,7 @@ cruel summer,Lover,-3,1,-1,-3,-1,2,2,-1,1,-1,"(Yeah, yeah, yeah, yeah)
  Every night that summer just to seal my fate (Oh)
  And I scream, ""For whatever it's worth
  I love you, ain't that the worst thing you ever heard?""
- (Yeah, yeah, yeah, yeah) "
+ (Yeah, yeah, yeah, yeah) ",1BxfuPKGuaTgP7aM0Bbdwr,https://open.spotify.com/track/1BxfuPKGuaTgP7aM0Bbdwr
 daylight,Lover,0,4,-2,-1,1,2,2,3,0,-1,"My love was as cruel as the cities I lived in
  Everyone looked worse in the light
  There are so many lines that I've crossed unforgiven
@@ -5962,7 +5962,7 @@ daylight,Lover,0,4,-2,-1,1,2,2,3,0,-1,"My love was as cruel as the cities I live
  Not the things I'm afraid of, I'm afraid of
  Or the things that haunt me in the middle of the night
  I, I just think that
- You are what you love "
+ You are what you love ",1fzAuUVbzlhZ1lJAx9PtY6,https://open.spotify.com/track/1fzAuUVbzlhZ1lJAx9PtY6
 death by a thousand cuts,Lover,-6,-7,0,-3,-3,0,-1,-2,-2,-2,"My, my, my, my
  My, my, my, my
  My, my, my, my
@@ -6028,7 +6028,7 @@ death by a thousand cuts,Lover,-6,-7,0,-3,-3,0,-1,-2,-2,-2,"My, my, my, my
  
  I take the long way home
  I ask the traffic lights if it'll be alright
- They say, ""I don't know"" "
+ They say, ""I don't know"" ",2dgFqt3w9xIQRjhPtwNk3D,https://open.spotify.com/track/2dgFqt3w9xIQRjhPtwNk3D
 false god,Lover,-5,1,-2,-2,-1,0,-1,0,0,2,"We were crazy to think
  Crazy to think that this could work
  Remember how I said I'd die for you?
@@ -6083,7 +6083,7 @@ false god,Lover,-5,1,-2,-2,-1,0,-1,0,0,2,"We were crazy to think
  Still worship this love
  Even if it's a false god
  Even if it's a false god
- Still worship this love "
+ Still worship this love ",5hQSXkFgbxjZo9uCwd11so,https://open.spotify.com/track/5hQSXkFgbxjZo9uCwd11so
 i forgot that you existed,Lover,2,-8,2,0,0,0,-3,-3,0,-2,"How many days did I spend thinking
  'Bout how you did me wrong, wrong, wrong?
  Lived in the shade you were throwing
@@ -6135,7 +6135,7 @@ i forgot that you existed,Lover,2,-8,2,0,0,0,-3,-3,0,-2,"How many days did I spe
  I did, I did, I did
  It isn't hate, it's just indifference
  It isn't love, it isn't hate, it's just indifference
- So, yeah "
+ So, yeah ",43rA71bccXFGD4C8GOpIlN,https://open.spotify.com/track/43rA71bccXFGD4C8GOpIlN
 i think he knows,Lover,11,8,3,3,3,2,1,2,3,2,"I think he knows
  His footprints on the sidewalk
  Lead to where I can't stop
@@ -6208,7 +6208,7 @@ i think he knows,Lover,11,8,3,3,3,2,1,2,3,2,"I think he knows
  I want you, bless my (Skipping down 16th Avenue, baby)
  I want you, bless my
  I want you, bless my soul
- And I ain't gotta tell him, I think he knows "
+ And I ain't gotta tell him, I think he knows ",2YWtcWi3a83pdEg3Gif4Pd,https://open.spotify.com/track/2YWtcWi3a83pdEg3Gif4Pd
 it's nice to have a friend,Lover,5,11,2,2,1,0,3,3,3,2,"Ooh
  Ooh
  
@@ -6243,7 +6243,7 @@ it's nice to have a friend,Lover,5,11,2,2,1,0,3,3,3,2,"Ooh
  It's nice to have a friend (Ooh)
  It's nice to have a friend (Ooh)
  It's nice to have a friend (Ooh)
- (Ooh) "
+ (Ooh) ",1SmiQ65iSAbPto6gPFlBYm,https://open.spotify.com/track/1SmiQ65iSAbPto6gPFlBYm
 london boy,Lover,9,7,3,3,1,2,1,2,2,2,"We can go drivin' in, on my scooter
  Uh, you know, just 'round London (Oh, I'd—)
  
@@ -6305,7 +6305,7 @@ london boy,Lover,9,7,3,3,1,2,1,2,2,2,"We can go drivin' in, on my scooter
  Stick with me, I'm your queen
  Like a Tennessee Stella McCartney on the Heath
  Just wanna be with you (Ooh), wanna be with you
- I fancy you (Yeah), I fancy you, ah-ah (Ooh) "
+ I fancy you (Yeah), I fancy you, ah-ah (Ooh) ",1LLXZFeAHK9R4xUramtUKw,https://open.spotify.com/track/1LLXZFeAHK9R4xUramtUKw
 lover,Lover,3,11,1,1,1,0,3,3,3,2,"We could leave the Christmas lights up 'til January
  And this is our place, we make the rules
  And there's a dazzling haze, a mysterious way about you, dear
@@ -6340,7 +6340,7 @@ lover,Lover,3,11,1,1,1,0,3,3,3,2,"We could leave the Christmas lights up 'til Ja
  Take me out and take me home (Forever and ever)
  You're my, my, my, my
  Oh, you're my, my, my, my
- Darling, you're my, my, my, my lover "
+ Darling, you're my, my, my, my lover ",1dGr1c8CrMLDpV6mPbImSI,https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI
 me!,Lover,7,5,3,2,2,0,1,2,3,-1,"I promise that you'll never find another like me
  
  I know that I'm a handful, baby, uh
@@ -6412,7 +6412,7 @@ me!,Lover,7,5,3,2,2,0,1,2,3,-1,"I promise that you'll never find another like me
  You can't spell ""awesome"" without ""me""
  You're the only one of you (Yeah, yeah)
  Baby, that's the fun of you
- And I promise that nobody's gonna love you like me-e-e "
+ And I promise that nobody's gonna love you like me-e-e ",2Rk4JlNc2TPmZe2af99d45,https://open.spotify.com/track/2Rk4JlNc2TPmZe2af99d45
 miss americana & the heartbreak prince,Lover,-1,1,-1,-1,1,0,2,0,0,-1,"You know I adore you, I'm crazier for you
  Than I was at sixteen, lost in a film scene
  Waving homecoming queens, marching band playing
@@ -6482,7 +6482,7 @@ miss americana & the heartbreak prince,Lover,-1,1,-1,-1,1,0,2,0,0,-1,"You know I
  
  It's you and me, that's my whole world
  They whisper in the hallway, ""She's a bad, bad girl""
- ""She's a bad, bad girl"" "
+ ""She's a bad, bad girl"" ",214nt20w5wOxJnY462klLw,https://open.spotify.com/track/214nt20w5wOxJnY462klLw
 paper rings,Lover,11,9,3,3,3,2,2,3,2,2,"The moon is high
  Like your friends were the night that we first met
  Went home and tried to stalk you on the internet
@@ -6553,7 +6553,7 @@ paper rings,Lover,11,9,3,3,3,2,2,3,2,2,"The moon is high
  In paper rings, in picture frames, in all my dreams
  Oh, you're the one I want
  You're the one I want, one I want
- You're the one I want, one I want "
+ You're the one I want, one I want ",4y5bvROuBDPr5fuwXbIBZR,https://open.spotify.com/track/4y5bvROuBDPr5fuwXbIBZR
 soon you'll get better,Lover,-3,1,-1,-1,-1,0,2,0,0,-1,"The buttons of my coat were tangled in my hair
  In doctor's office lighting, I didn't tell you I was scared
  That was the first time we were there
@@ -6605,7 +6605,7 @@ soon you'll get better,Lover,-3,1,-1,-1,-1,0,2,0,0,-1,"The buttons of my coat we
  Soon, you'll get better
  Ooh-ah
  You'll get better soon
- 'Cause you have to "
+ 'Cause you have to ",4AYtqFyFbX0Xkc2wtcygTr,https://open.spotify.com/track/4AYtqFyFbX0Xkc2wtcygTr
 the archer,Lover,-1,1,-3,-1,1,2,2,0,0,-1,"Combat, I'm ready for combat
  I say I don't want that, but what if I do?
  'Cause cruelty wins in the movies
@@ -6658,7 +6658,7 @@ the archer,Lover,-1,1,-3,-1,1,2,2,0,0,-1,"Combat, I'm ready for combat
  Who could stay?
  You could stay
  You could stay
- Combat, I'm ready for combat "
+ Combat, I'm ready for combat ",3pHkh7d0lzM2AldUtz2x37,https://open.spotify.com/track/3pHkh7d0lzM2AldUtz2x37
 the man,Lover,2,-2,2,1,-3,2,1,-1,0,-2,"I would be complex, I would be cool
  They'd say I played the field before I found someone to commit to
  And that would be okay for me to do
@@ -6711,7 +6711,7 @@ the man,Lover,2,-2,2,1,-3,2,1,-1,0,-2,"I would be complex, I would be cool
  I'd be the man (Man, yeah)
  I'd be the man (Man, I'd be the man)
  If I was a man
- Then I'd be the man "
+ Then I'd be the man ",3RauEVgRgj1IuWdJ9fDs70,https://open.spotify.com/track/3RauEVgRgj1IuWdJ9fDs70
 you need to calm down,Lover,7,-8,3,1,3,0,0,-3,-3,-2,"You are somebody that I don't know
  But you're takin' shots at me like it's Patrón
  And I'm just like, damn, it's 7 AM
@@ -6758,7 +6758,7 @@ you need to calm down,Lover,7,-8,3,1,3,0,0,-3,-3,-2,"You are somebody that I don
  And I'm just like oh-oh, oh-oh, oh-oh, oh-oh, oh-oh (Oh)
  You need to just stop (Can you stop?)
  Like can you just not step on our gowns?
- You need to calm down "
+ You need to calm down ",6RRNNciQGZEXnqk8SQ9yv5,https://open.spotify.com/track/6RRNNciQGZEXnqk8SQ9yv5
 only the young,Undefined,3,-7,2,0,3,-2,-2,-3,0,-2,"It keeps me awake, the look on your face
  The moment you heard the news
  You're screaming inside and frozen in time
@@ -6812,7 +6812,7 @@ only the young,Undefined,3,-7,2,0,3,-2,-2,-3,0,-2,"It keeps me awake, the look o
  
  Only the young
  Only the young
- Only the young "
+ Only the young ",-,-
 august,folklore,0,-1,0,-1,1,0,-1,-1,1,0,"Salt air, and the rust on your door
  I never needed anything more
  Whispers of ""Are you sure?""
@@ -6869,7 +6869,7 @@ august,folklore,0,-1,0,-1,1,0,-1,-1,1,0,"Salt air, and the rust on your door
  And then canceled my plans just in case you'd call?
  Back when I was livin' for the hope of it all (For the hope of it all)
  For the hope of it all, for the hope of it all
- (For the hope of it all, for the hope of it all) "
+ (For the hope of it all, for the hope of it all) ",3hUxzQpSfdDqwM3ZTFQY0K,https://open.spotify.com/track/3hUxzQpSfdDqwM3ZTFQY0K
 betty,folklore,-1,-6,-2,-2,3,0,-2,0,-1,-3,"Betty, I won't make assumptions
  About why you switched your homeroom, but
  I think it's 'cause of me
@@ -6945,7 +6945,7 @@ betty,folklore,-1,-6,-2,-2,3,0,-2,0,-1,-3,"Betty, I won't make assumptions
  Standing in your cardigan
  Kissin' in my car again
  Stopped at a streetlight
- You know I miss you "
+ You know I miss you ",5kI4eCXXzyuIUXjQra0Cxi,https://open.spotify.com/track/5kI4eCXXzyuIUXjQra0Cxi
 cardigan,folklore,-2,-2,-1,-1,0,0,-2,1,0,-1,"Vintage tee, brand new phone
  High heels on cobblestones
  When you are young, they assume you know nothing
@@ -7009,7 +7009,7 @@ cardigan,folklore,-2,-2,-1,-1,0,0,-2,1,0,-1,"Vintage tee, brand new phone
  
  And when I felt like I was an old cardigan
  Under someone's bed
- You put me on and said I was your favorite "
+ You put me on and said I was your favorite ",4R2kfaDFhslZEMJqAFNpdd,https://open.spotify.com/track/4R2kfaDFhslZEMJqAFNpdd
 epiphany,folklore,-5,-6,0,-3,-2,0,0,-3,0,-3,"Keep your helmet, keep your life, son
  Just a flesh wound, here's your rifle
  Crawling up the beaches now
@@ -7038,7 +7038,7 @@ epiphany,folklore,-5,-6,0,-3,-2,0,0,-3,0,-3,"Keep your helmet, keep your life, s
  Only twenty minutes to sleep
  But you dream of some epiphany
  Just one single glimpse of relief
- To make some sense of what you've seen "
+ To make some sense of what you've seen ",08fa9LFcFBTcilB3iq2e2A,https://open.spotify.com/track/08fa9LFcFBTcilB3iq2e2A
 exile,folklore,0,-3,1,-3,2,0,-2,-1,3,-3,"I can see you standing, honey
  With his arms around your body
  Laughin', but the joke's not funny at all
@@ -7104,7 +7104,7 @@ exile,folklore,0,-3,1,-3,2,0,-2,-1,3,-3,"I can see you standing, honey
  (So many signs) I couldn't turn things around (I couldn't turn things around)
  'Cause you never gave a warning sign (You never gave a warning sign)
  You never gave a warning sign
- Ah, ah "
+ Ah, ah ",4pvb0WLRcMtbPGmtejJJ6y,https://open.spotify.com/track/4pvb0WLRcMtbPGmtejJJ6y
 hoax,folklore,-7,-7,-1,-3,-3,0,-3,1,-3,-2,"My only one
  My smoking gun
  My eclipsed sun
@@ -7147,7 +7147,7 @@ hoax,folklore,-7,-7,-1,-3,-3,0,-3,1,-3,-2,"My only one
  My broken drum
  You have beaten my heart
  Don't want no other shade of blue but you
- No other sadness in the world would do "
+ No other sadness in the world would do ",4XCYmu7QLySdIahgBALKJK,https://open.spotify.com/track/4XCYmu7QLySdIahgBALKJK
 illicit affairs,folklore,-3,1,-1,-2,-2,2,1,0,1,-1,"Make sure nobody sees you leave
  Hood over your head, keep your eyes down
  Tell your friends you're out for a run
@@ -7188,7 +7188,7 @@ illicit affairs,folklore,-3,1,-1,-2,-2,2,1,0,1,-1,"Make sure nobody sees you lea
  
  And you know damn well
  For you, I would ruin myself
- A million little times "
+ A million little times ",7CVTowKpGPA2MsIbkTl2oc,https://open.spotify.com/track/7CVTowKpGPA2MsIbkTl2oc
 invisible string,folklore,-1,1,1,0,0,-2,2,0,0,-1,"Green was the color of the grass
  Where I used to read at Centennial Park
  I used to think I would meet somebody there
@@ -7247,7 +7247,7 @@ invisible string,folklore,-1,1,1,0,0,-2,2,0,0,-1,"Green was the color of the gra
  Ooh-ooh-ooh-ooh
  
  (Ah-ah-ah)
- (Ah-ah-ah) "
+ (Ah-ah-ah) ",6VsvKPJ4xjVNKpI8VVZ3SV,https://open.spotify.com/track/6VsvKPJ4xjVNKpI8VVZ3SV
 mad woman,folklore,0,-9,3,-2,-3,2,-3,0,-3,-3,"What did you think I'd say to that?
  Does a scorpion sting when fighting back?
  They strike to kill, and you know I will
@@ -7299,7 +7299,7 @@ mad woman,folklore,0,-9,3,-2,-3,2,-3,0,-3,-3,"What did you think I'd say to that
  No one likes a mad woman
  
  What a shame she went mad
- You made her like that "
+ You made her like that ",0RP1kqoSPkVXsKiQNhMKzV,https://open.spotify.com/track/0RP1kqoSPkVXsKiQNhMKzV
 mirrorball,folklore,3,-1,-1,0,2,2,0,0,0,-1,"I want you to know
  I'm a mirrorball
  I'll show you every version of yourself tonight
@@ -7343,7 +7343,7 @@ mirrorball,folklore,3,-1,-1,0,2,2,0,0,0,-1,"I want you to know
  
  Because I'm a mirrorball
  I'm a mirrorball
- And I'll show you every version of yourself tonight "
+ And I'll show you every version of yourself tonight ",2I8YAEA1VmCuP1wkJHMpTw,https://open.spotify.com/track/2I8YAEA1VmCuP1wkJHMpTw
 my tears ricochet,folklore,-2,-9,1,-2,-3,2,-2,-2,-3,-2,"We gather here, we line up, weepin' in a sunlit room
  And if I'm on fire, you'll be made of ashes, too
  Even on my worst day, did I deserve, babe
@@ -7385,7 +7385,7 @@ my tears ricochet,folklore,-2,-9,1,-2,-3,2,-2,-2,-3,-2,"We gather here, we line 
  And you're tossing out blame, drunk on this pain
  Crossing out the good years
  And you're cursing my name, wishing I stayed
- Look at how my tears ricochet "
+ Look at how my tears ricochet ",1MgV7FIyNxIG7WzMRJV5HC,https://open.spotify.com/track/1MgV7FIyNxIG7WzMRJV5HC
 peace,folklore,5,4,1,1,1,2,3,0,0,1,"Our coming-of-age has come and gone
  Suddenly, this summer, it's clear
  I never had the courage of my convictions
@@ -7421,7 +7421,7 @@ peace,folklore,5,4,1,1,1,2,3,0,0,1,"Our coming-of-age has come and gone
  The devil's in the details, but you got a friend in me
  Would it be enough if I could never give you peace?
  Would it be enough if I could never give you peace?
- Would it be enough if I could never give you peace? "
+ Would it be enough if I could never give you peace? ",6JlI8Ay77m4nJvZTHvfT1J,https://open.spotify.com/track/6JlI8Ay77m4nJvZTHvfT1J
 the 1,folklore,3,-3,1,0,0,2,-1,-1,0,-1,"I'm doing good, I'm on some new shit
  Been saying ""yes"" instead of ""no""
  I thought I saw you at the bus stop, I didn't though
@@ -7475,7 +7475,7 @@ the 1,folklore,3,-3,1,0,0,2,-1,-1,0,-1,"I'm doing good, I'm on some new shit
  For digging up the grave another time
  But it would've been fun
  If you would've been the one
- (Ooh) "
+ (Ooh) ",4pfrrhvplbJZAIsfosGWQP,https://open.spotify.com/track/4pfrrhvplbJZAIsfosGWQP
 the lakes,folklore,-2,-1,-1,-2,1,0,0,1,0,-2,"Is it romantic how all my elegies eulogize me?
  I'm not cut out for all these cynical clones
  These hunters with cell phones
@@ -7508,7 +7508,7 @@ the lakes,folklore,-2,-1,-1,-2,1,0,0,1,0,-2,"Is it romantic how all my elegies e
  I don't belong and, my beloved, neither do you
  Those Windermere peaks look like a perfect place to cry
  I'm setting off, but not without my muse
- No, not without you "
+ No, not without you ",0eFQWVz0qIxDOvhLpZ40P7,https://open.spotify.com/track/0eFQWVz0qIxDOvhLpZ40P7
 the last great american dynasty,folklore,8,2,3,1,2,2,3,-3,3,-1,"Rebekah rode up on the afternoon train, it was sunny
  Her saltbox house on the coast took her mind off St. Louis
  Bill was the heir to the Standard Oil name and money
@@ -7554,7 +7554,7 @@ the last great american dynasty,folklore,8,2,3,1,2,2,3,-3,3,-1,"Rebekah rode up 
  I had a marvelous time ruining everything
  A marvelous time ruining everything
  A marvelous time
- I had a marvelous time "
+ I had a marvelous time ",2olxzvoFI9IpxqFeUv7WOX,https://open.spotify.com/track/2olxzvoFI9IpxqFeUv7WOX
 this is me trying,folklore,-2,-4,-3,-3,2,2,-2,0,0,-2,"I've been having a hard time adjusting
  I had the shiniest wheels, now they're rusting
  I didn't know if you'd care if I came back
@@ -7588,7 +7588,7 @@ this is me trying,folklore,-2,-4,-3,-3,2,2,-2,0,0,-2,"I've been having a hard ti
  (And maybe I don't quite know what to say)
  I just wanted you to know that this is me trying
  
- At least I'm trying "
+ At least I'm trying ",7kt9e9LFSpN1zQtYEl19o1,https://open.spotify.com/track/7kt9e9LFSpN1zQtYEl19o1
 champagne problems,evermore,-5,-10,-3,-2,0,0,-3,-3,-2,-2,"You booked the night train for a reason
  So you could sit there in this hurt
  Bustling crowds or silent sleepers
@@ -7643,7 +7643,7 @@ champagne problems,evermore,-5,-10,-3,-2,0,0,-3,-3,-2,-2,"You booked the night t
  You won't remember all my
  Champagne problems
  You won't remember all my
- Champagne problems "
+ Champagne problems ",1gcyHQpBQ1lfXGdhZmWrHP,https://open.spotify.com/track/1gcyHQpBQ1lfXGdhZmWrHP
 closure,evermore,0,-7,2,-1,-3,2,-2,-3,0,-2,"It's been a long time
  And seeing the shape of your name
  Still spells out pain
@@ -7687,7 +7687,7 @@ closure,evermore,0,-7,2,-1,-3,2,-2,-3,0,-2,"It's been a long time
  Yes, I'm doing better
  I know that it's over, I don't need your
  Closure, closure, your closure
- Your closure "
+ Your closure ",35rdVq36LMHQX0Suw9a6tK,https://open.spotify.com/track/35rdVq36LMHQX0Suw9a6tK
 coney island,evermore,-6,-7,-2,-3,-3,2,-2,-1,-2,-2,"Break my soul in two looking for you
  But you're right here
  If I can't relate to you anymore
@@ -7753,7 +7753,7 @@ coney island,evermore,-6,-7,-2,-3,-3,2,-2,-1,-2,-2,"Break my soul in two looking
  But I think that I forgot to say your name
  Over and over
  Sorry for not making you my, making you my
- Making you my centerfold "
+ Making you my centerfold ",3k7ne7VmH43ZPWxPdvPUgR,https://open.spotify.com/track/3k7ne7VmH43ZPWxPdvPUgR
 cowboy like me,evermore,0,2,-1,-1,0,2,1,0,1,0,"And the tennis court was covered up
  With some tent-like thing
  And you asked me to dance
@@ -7818,7 +7818,7 @@ cowboy like me,evermore,0,2,-1,-1,0,2,1,0,1,0,"And the tennis court was covered 
  
  And I'm never gonna love again
  I'm never gonna love again
- I'm never gonna love again "
+ I'm never gonna love again ",1XjHRolIXL2M1EEOUsGGR4,https://open.spotify.com/track/1XjHRolIXL2M1EEOUsGGR4
 dorothea,evermore,8,-3,3,2,1,2,-1,0,0,-2,"Hey, Dorothea, do you ever stop and think about me?
  When we were younger, down in the park
  Honey, makin' a lark of the misery
@@ -7867,7 +7867,7 @@ dorothea,evermore,8,-3,3,2,1,2,-1,0,0,-2,"Hey, Dorothea, do you ever stop and th
  Ooh-woo-ooh-ooh-ooh, ooh-ooh-ooh
  Dorothea (Ah-ah-ah)
  Ah-ah
- Ooh "
+ Ooh ",670fUmXf4KQekzbEgaXyPA,https://open.spotify.com/track/670fUmXf4KQekzbEgaXyPA
 evermore,evermore,-5,-4,-2,-2,-3,2,-1,0,-1,-2,"Gray November
  I've been down since July
  Motion capture
@@ -7931,7 +7931,7 @@ evermore,evermore,-5,-4,-2,-2,-3,2,-1,0,-1,-2,"Gray November
  Evermore (Evermore)
  Evermore (Evermore)
  This pain wouldn't be for evermore
- Evermore "
+ Evermore ",3O5osWf1rSoKMwe6E9ZaXP,https://open.spotify.com/track/3O5osWf1rSoKMwe6E9ZaXP
 gold rush,evermore,6,-4,2,0,2,2,-1,-2,0,-1,"Gleaming, twinkling
  Eyes like sinking
  Ships on waters
@@ -7982,7 +7982,7 @@ gold rush,evermore,6,-4,2,0,2,2,-1,-2,0,-1,"Gleaming, twinkling
  Gleaming, twinkling
  Eyes like sinking
  Ships on waters
- So inviting, I almost jump in "
+ So inviting, I almost jump in ",3Dby3p1m6IOZn2gIIqECgK,https://open.spotify.com/track/3Dby3p1m6IOZn2gIIqECgK
 happiness,evermore,-1,-3,-2,-2,1,2,-2,1,-1,-1,"Honey, when I'm above the trees
  I see this for what it is
  But now I'm right down in it, all the years I've given
@@ -8053,7 +8053,7 @@ happiness,evermore,-1,-3,-2,-2,1,2,-2,1,-1,-1,"Honey, when I'm above the trees
  From the dress I wore at midnight, leave it all behind
  Oh, leave it all behind
  Leave it all behind
- And there is happiness "
+ And there is happiness ",55Vf4bimc1Rtfg0PAQRAo2,https://open.spotify.com/track/55Vf4bimc1Rtfg0PAQRAo2
 it's time to go,evermore,6,-5,2,0,2,2,-2,-3,1,-1,"When the dinner is cold and the chatter gets old
  You ask for the tab
  Or that moment again, he's insisting that friends
@@ -8113,7 +8113,7 @@ it's time to go,evermore,6,-5,2,0,2,2,-2,-3,1,-1,"When the dinner is cold and th
  And, well, you know, you know, you know, you know
  When it's time to go
  So then you go and then you go
- You just go "
+ You just go ",1kdWw77ZpYOkhxeuhzU1j6,https://open.spotify.com/track/1kdWw77ZpYOkhxeuhzU1j6
 ivy,evermore,1,-1,1,-1,1,0,1,0,1,-3,"How's one to know?
  I'd meet you where the spirit meets the bones
  In a faith-forgotten land
@@ -8184,7 +8184,7 @@ ivy,evermore,1,-1,1,-1,1,0,1,0,1,-3,"How's one to know?
  And now I'm covered
  In you, in you
  Now I'm covered in you
- In you "
+ In you ",43Ykum9T72UOPhBN31grpN,https://open.spotify.com/track/43Ykum9T72UOPhBN31grpN
 long story short,evermore,7,3,1,1,3,2,2,2,0,-1,"Fatefully
  I tried to pick my battles 'til the battle picked me
  Misery
@@ -8262,7 +8262,7 @@ long story short,evermore,7,3,1,1,3,2,2,2,0,-1,"Fatefully
  I'm all about you
  
  Long story short, it was a bad time
- Long story short, I survived "
+ Long story short, I survived ",5VYWxXUpxuxEmCqMLDqICo,https://open.spotify.com/track/5VYWxXUpxuxEmCqMLDqICo
 "no body, no crime",evermore,2,-11,3,-1,3,-3,-3,-3,-2,-3,"He did it
  He did it
  
@@ -8320,7 +8320,7 @@ long story short,evermore,7,3,1,1,3,2,2,2,0,-1,"Fatefully
  No, no body, no crime
  I wasn't lettin' up until the day he
  No, no body, no crime
- I wasn't lettin' up until the day he died "
+ I wasn't lettin' up until the day he died ",6uwfVkaOM1mcMkFmSn35ix,https://open.spotify.com/track/6uwfVkaOM1mcMkFmSn35ix
 right where you left me,evermore,-3,-7,-1,-3,-1,2,-2,-1,-1,-3,"Friends break up, friends get married
  Strangers get born, strangers get buried
  Trends change, rumors fly through new skies
@@ -8377,7 +8377,7 @@ right where you left me,evermore,-3,-7,-1,-3,-1,2,-2,-1,-1,-3,"Friends break up,
  You left me, you left me no, oh, you left me no
  You left me no choice but to stay here forever
  You left me, you left me no, oh, you left me no
- You left me no choice but to stay here forever "
+ You left me no choice but to stay here forever ",3zwMVvkBe2qIKDObWgXw4N,https://open.spotify.com/track/3zwMVvkBe2qIKDObWgXw4N
 tis the damn season,evermore,-5,-4,-3,-2,-2,2,-2,0,-1,-1,"If I wanted to know who you were hanging with
  While I was gone, I would've asked you
  It's the kind of cold, fogs up windshield glass
@@ -8434,7 +8434,7 @@ tis the damn season,evermore,-5,-4,-3,-2,-2,2,-2,0,-1,-1,"If I wanted to know wh
  We could just ride around
  And the road not taken looks real good now
  And it always leads to you and my hometown
- It always leads to you and my hometown "
+ It always leads to you and my hometown ",7dW84mWkdWE5a6lFWxJCBG,https://open.spotify.com/track/7dW84mWkdWE5a6lFWxJCBG
 tolerate it,evermore,-3,1,1,-2,-2,0,2,0,0,-1,"I sit and watch you readin' with your head low
  I wake and watch you breathin' with your eyes closed
  I sit and watch you
@@ -8482,7 +8482,7 @@ tolerate it,evermore,-3,1,1,-2,-2,0,2,0,0,-1,"I sit and watch you readin' with y
  I know my love should be celebrated
  But you tolerate it
  
- I sit and watch you "
+ I sit and watch you ",6lCvK2AR2uOKkVFCVlAzzm,https://open.spotify.com/track/6lCvK2AR2uOKkVFCVlAzzm
 willow,evermore,4,3,1,1,2,0,1,2,0,0,"I'm like the water when your ship rolled in that night
  Rough on the surface, but you cut through like a knife
  And if it was an open-shut case
@@ -8543,7 +8543,7 @@ willow,evermore,4,3,1,1,2,0,1,2,0,0,"I'm like the water when your ship rolled in
  That's my man
  Hey, that's my man
  I'm begging for you to take my hand
- Wreck my plans, that's my man "
+ Wreck my plans, that's my man ",2gVhfX2Gy1T9kDuS9azrF7,https://open.spotify.com/track/2gVhfX2Gy1T9kDuS9azrF7
 you all over me,Fearless (Taylor's Version),-3,-3,-1,-2,0,0,-2,0,0,-1,"Once the last drop of rain has dried off the pavement
  Shouldn't I find a stain? But I never do
  The way the tires turn stones on old county roads
@@ -8587,7 +8587,7 @@ you all over me,Fearless (Taylor's Version),-3,-3,-1,-2,0,0,-2,0,0,-1,"Once the 
  I've still got you all over me
  
  I've still got you all over me
- Still got you all over me "
+ Still got you all over me ",4CHpVfAhuxNJ3ibExe6kxO,https://open.spotify.com/track/4CHpVfAhuxNJ3ibExe6kxO
 mr. perfectly fine,Fearless (Taylor's Version),3,-7,2,0,1,0,-2,-2,0,-3,"Mr. ""Perfect face,"" Mr. ""Here to stay""
  Mr. ""Looked me in the eye and told me you would never go away""
  Everything was right, Mr. ""I've been waitin' for you all my life""
@@ -8647,7 +8647,7 @@ mr. perfectly fine,Fearless (Taylor's Version),3,-7,2,0,1,0,-2,-2,0,-3,"Mr. ""Pe
  
  You're perfectly fine
  Mr. ""Looked me in the eye and told me you would never go away""
- You said you'd never go away "
+ You said you'd never go away ",2CYVETnhM9aytqrazYYwrK,https://open.spotify.com/track/2CYVETnhM9aytqrazYYwrK
 we were happy,Fearless (Taylor's Version),-7,-1,-3,-1,-3,0,-1,0,0,0,"We used to walk along the streets
  When the porch lights were shinin' bright
  Before I had somewhere to be
@@ -8696,7 +8696,7 @@ we were happy,Fearless (Taylor's Version),-7,-1,-3,-1,-3,0,-1,0,0,0,"We used to 
  And you were gonna marry me
  And we were happy
  We were happy
- Oh, we were happy "
+ Oh, we were happy ",34V9RiEPe8MNdU32qJsJa1,https://open.spotify.com/track/34V9RiEPe8MNdU32qJsJa1
 that's when,Fearless (Taylor's Version),-1,5,-3,0,2,0,0,2,2,1,"You said, ""I know""
  When I said, ""I need some time, need some space
  To think about all of this""
@@ -8754,7 +8754,7 @@ that's when,Fearless (Taylor's Version),-1,5,-3,0,2,0,0,2,2,1,"You said, ""I kno
  (That's when I'll be waitin' at the front gate)
  That's when I miss you, that's when I want you
  (That's when, when I see your face)
- That's when I love you, that's when "
+ That's when I love you, that's when ",7eResoqEJJAVTkQYSqvO3P,https://open.spotify.com/track/7eResoqEJJAVTkQYSqvO3P
 don't you,Fearless (Taylor's Version),-7,-4,-1,-3,-3,0,-1,-1,1,-3,"Hey, I knew I'd run into you somewhere
  It's been a while, I didn't mean to stare
  I heard she's nothin' like me
@@ -8789,7 +8789,7 @@ don't you,Fearless (Taylor's Version),-7,-4,-1,-3,-3,0,-1,-1,1,-3,"Hey, I knew I
  You don't (You don't) know how much I feel I love you still
  So why don't you, don't you?
  
- Don't you "
+ Don't you ",-,-
 bye bye baby,Fearless (Taylor's Version),-5,-6,-1,-3,-1,0,-1,-2,0,-3,"It wasn't just like a movie
  The rain didn't soak through my clothes, down to my skin
  I'm drivin' away and I, I guess you could say
@@ -8840,7 +8840,7 @@ bye bye baby,Fearless (Taylor's Version),-5,-6,-1,-3,-1,0,-1,-2,0,-3,"It wasn't 
  'Cause you took me home but you just couldn't keep me
  Oh, you took me home, I thought you were gonna keep me
  Bye, bye, baby
- Bye, bye, baby "
+ Bye, bye, baby ",4qUijfYU8EoIWiY6oSyrgT,https://open.spotify.com/track/4qUijfYU8EoIWiY6oSyrgT
 message in a bottle,Red (Taylor's Version),5,-3,0,2,1,2,0,0,0,-3,"I know that you like me
  And it's kinda frightenin' standin' here waitin', waitin'
  And I became hypnotized
@@ -8894,7 +8894,7 @@ message in a bottle,Red (Taylor's Version),5,-3,0,2,1,2,0,0,0,-3,"I know that yo
  (Love) You could be the one that I love
  (Love) You could be the one that I love
  (Love) My love
- And now I'm standin' here, hopin' this gets to you "
+ And now I'm standin' here, hopin' this gets to you ",3z6XUommYDWPHeFhmhhT6j,https://open.spotify.com/track/3z6XUommYDWPHeFhmhhT6j
 i bet you think about me,Red (Taylor's Version),1,-10,2,-3,0,2,-2,-2,-3,-3,"3 AM and I'm still awake, I'll bet you're just fine
  Fast asleep in your city that's better than mine
  And the girl in your bed has a fine pedigree
@@ -8953,7 +8953,7 @@ i bet you think about me,Red (Taylor's Version),1,-10,2,-3,0,2,-2,-2,-3,-3,"3 AM
  With your organic shoes and your million-dollar couch
  I bet you think about me when you say
  ""Oh my god, she's insane, she wrote a song about me""
- I bet you think about me "
+ I bet you think about me ",4CkgMiMqZ5JzW9iYXSTMTL,https://open.spotify.com/track/4CkgMiMqZ5JzW9iYXSTMTL
 forever winter,Red (Taylor's Version),4,8,-1,0,3,2,2,2,1,3,"He says he doesn't believe anything much he hears these days
  He says, ""Why fall in love, just so you can watch it go away?""
  He spends most of his nights wishing it was how it used to be
@@ -9011,7 +9011,7 @@ forever winter,Red (Taylor's Version),4,8,-1,0,3,2,2,2,1,3,"He says he doesn't b
  Forever winter if you go
  
  He says he doesn't believe anything much he hears these days
- I say, ""Believe in one thing, I won't go away"" "
+ I say, ""Believe in one thing, I won't go away"" ",3oGVx9RBmiYGv5ZCecWLkx,https://open.spotify.com/track/3oGVx9RBmiYGv5ZCecWLkx
 run,Red (Taylor's Version),6,9,2,1,1,2,2,2,3,2,"One, two, three, four
  
  Give me the keys, I'll bring the car back around
@@ -9071,7 +9071,7 @@ run,Red (Taylor's Version),6,9,2,1,1,2,2,2,3,2,"One, two, three, four
  Ooh, we'll run
  Ooh, we'll run
  Ooh, we'll run
- Ooh, and we'll run "
+ Ooh, and we'll run ",4IQkfUsrwXol38VV3U7t7T,https://open.spotify.com/track/4IQkfUsrwXol38VV3U7t7T
 the very first night,Red (Taylor's Version),3,-2,0,0,1,2,-1,0,0,-1,"I wish I could fly
  I'd pick you up and we'd go back in time
  I'd write this in the sky
@@ -9136,7 +9136,7 @@ the very first night,Red (Taylor's Version),3,-2,0,0,1,2,-1,0,0,-1,"I wish I cou
  Take me away (Take me), take me away (Take me)
  Take me away (Take me) to you, to you
  Take me away (Take me), take me away (Take me)
- Take me away (Take me) to you, to you "
+ Take me away (Take me) to you, to you ",6pYNq0ZwpPVazKzsqpf0G8,https://open.spotify.com/track/6pYNq0ZwpPVazKzsqpf0G8
 all too well (10 minute version),Red (Taylor's Version),-9,-9,-1,-2,-3,-3,-3,-2,-2,-2,"I walked through the door with you, the air was cold
  But somethin' 'bout it felt like home somehow
  And I left my scarf there at your sister's house
@@ -9255,7 +9255,7 @@ all too well (10 minute version),Red (Taylor's Version),-9,-9,-1,-2,-3,-3,-3,-2,
  Wind in my hair, I was there, I was there
  Down the stairs, I was there, I was there
  Sacred prayer, I was there, I was there
- It was rare, you remember it "
+ It was rare, you remember it ",5enxwA8aAbwZbf5qCHORXi,https://open.spotify.com/track/5enxwA8aAbwZbf5qCHORXi
 lavender haze,Midnights,-1,3,-1,-1,1,0,2,0,1,0,"Meet me at midnight
  
  Staring at the ceiling with you
@@ -9314,7 +9314,7 @@ lavender haze,Midnights,-1,3,-1,-1,1,0,2,0,1,0,"Meet me at midnight
  Get it off my desk
  That lavender haze
  I just wanna stay
- I just wanna stay in that lavender haze "
+ I just wanna stay in that lavender haze ",5jQI2r1RdgtuT8S3iG8zFC,https://open.spotify.com/track/5jQI2r1RdgtuT8S3iG8zFC
 maroon,Midnights,0,-4,0,-2,0,2,-1,-1,-2,0,"When the morning came
  We were cleaning incense off your vinyl shelf
  'Cause we lost track of time again
@@ -9374,7 +9374,7 @@ maroon,Midnights,0,-4,0,-2,0,2,-1,-1,-2,0,"When the morning came
  The lips I used to call home
  So scarlet, it was maroon
  It was maroon
- It was maroon "
+ It was maroon ",3eX0NZfLtGzoLUxPNvRfqm,https://open.spotify.com/track/3eX0NZfLtGzoLUxPNvRfqm
 anti hero,Midnights,-3,-2,-3,-3,1,2,0,0,0,-2,"I have this thing where I get older, but just never wiser
  Midnights become my afternoons
  When my depression works the graveyard shift, all of the people
@@ -9429,7 +9429,7 @@ anti hero,Midnights,-3,-2,-3,-3,1,2,0,0,0,-2,"I have this thing where I get olde
  I'm the problem, it's me (I'm the problem, it's me)
  At teatime (Teatime), everybody agrees (Everybody agrees)
  I'll stare directly at the sun, but never in the mirror
- It must be exhausting always rooting for the anti-hero "
+ It must be exhausting always rooting for the anti-hero ",0V3wPSX9ygBnCm8psDIegu,https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu
 snow on the beach,Midnights,5,3,1,1,1,2,2,0,0,1,"One night, a few moons ago
  I saw flecks of what could've been lights
  But it might just have been you
@@ -9506,7 +9506,7 @@ snow on the beach,Midnights,5,3,1,1,1,2,2,0,0,1,"One night, a few moons ago
  (It's comin' down, it's comin' down)
  (It's comin' down, it's comin' down)
  (It's comin' down, it's comin' down)
- (It's comin' down, it's comin' down) "
+ (It's comin' down, it's comin' down) ",1wtOxkiel43cVs0Yux5Q4h,https://open.spotify.com/track/1wtOxkiel43cVs0Yux5Q4h
 "you're on your own, kid",Midnights,5,-5,1,0,2,2,-1,-2,-1,-1,"Summer went away, still, the yearning stays
  I play it cool with the best of them
  I wait patiently, he's gonna notice me
@@ -9556,7 +9556,7 @@ snow on the beach,Midnights,5,3,1,1,1,2,2,0,0,1,"One night, a few moons ago
  You're on your own, kid
  Yeah, you can face this
  You're on your own, kid
- You always have been "
+ You always have been ",4D7BCuvgdJlYvlX5WlN54t,https://open.spotify.com/track/4D7BCuvgdJlYvlX5WlN54t
 midnight rain,Midnights,-2,-6,-3,-1,0,2,-1,-2,-2,-1,"Rain
  He wanted it comfortable, I wanted that pain
  He wanted a bride, I was making my own name
@@ -9605,7 +9605,7 @@ midnight rain,Midnights,-2,-6,-3,-1,0,2,-1,-2,-2,-1,"Rain
  Some kind of haunted, some kind of haunted
  And I never think of him
  Except on midnights like this
- (Midnights like this, midnights like this) "
+ (Midnights like this, midnights like this) ",3rWDp9tBPQR9z6U5YyRSK4,https://open.spotify.com/track/3rWDp9tBPQR9z6U5YyRSK4
 question...?,Midnights,3,-3,0,0,1,2,-1,0,0,-2,"I remember
  
  Good girl, sad boy
@@ -9668,7 +9668,7 @@ question...?,Midnights,3,-3,0,0,1,2,-1,0,0,-2,"I remember
  Did you wish you'd put up more of a fight, oh (More of a fight)
  When she said it was too much?
  Do you wish you could still touch her?
- It's just a question "
+ It's just a question ",0heeNYlwOGuUSe7TgUD27B,https://open.spotify.com/track/0heeNYlwOGuUSe7TgUD27B
 vigilante shit,Midnights,6,-5,3,2,3,-2,-3,-2,0,0,"Draw the cat eye sharp enough to kill a man
  You did some bad things, but I'm the worst of them
  Sometimes I wonder which one'll be your last lie
@@ -9712,7 +9712,7 @@ vigilante shit,Midnights,6,-5,3,2,3,-2,-3,-2,0,0,"Draw the cat eye sharp enough 
  Don't get sad, get even
  So on the weekends
  I don't dress for friends
- Lately, I've been dressin' for revenge "
+ Lately, I've been dressin' for revenge ",1xwAWUI6Dj0WGC3KiUPN0O,https://open.spotify.com/track/1xwAWUI6Dj0WGC3KiUPN0O
 bejeweled,Midnights,5,-6,-1,2,2,2,-1,-3,0,-2,"Baby love, I think I've been a little too kind
  Didn't notice you walkin' all over my peace of mind
  In the shoes I gave you as a present
@@ -9782,7 +9782,7 @@ bejeweled,Midnights,5,-6,-1,2,2,2,-1,-3,0,-2,"Baby love, I think I've been a lit
  I polish up nice
  Best believe I'm still bejeweled
  When I walk in the room
- I can still make the whole place shimmer "
+ I can still make the whole place shimmer ",3qoftcUZaUOncvIYjFSPdE,https://open.spotify.com/track/3qoftcUZaUOncvIYjFSPdE
 labyrinth,Midnights,-1,1,0,-2,-1,2,1,0,2,-2,"""It only hurts this much right now""
  Was what I was thinkin' the whole time
  Breathe in, breathe through, breathe deep, breathe out
@@ -9826,7 +9826,7 @@ labyrinth,Midnights,-1,1,0,-2,-1,2,1,0,2,-2,"""It only hurts this much right now
  Oh no, I'm fallin' in love again
  Oh, I'm fallin' in love
  I thought the plane was goin' down
- How'd you turn it right around? "
+ How'd you turn it right around? ",0A1JLUlkZkp2EFrosoNQi0,https://open.spotify.com/track/0A1JLUlkZkp2EFrosoNQi0
 karma,Midnights,6,-4,3,2,1,0,-2,0,0,-2,"You're talking shit for the hell of it
  Addicted to betrayal, but you're relevant
  You're terrified to look down
@@ -9894,7 +9894,7 @@ karma,Midnights,6,-4,3,2,1,0,-2,0,0,-2,"You're talking shit for the hell of it
  Karma is my boyfriend
  Karma is a god (Ah)
  Uh-huh, mm
- Karma's a relaxing thought "
+ Karma's a relaxing thought ",7KokYm8cMIXCsGVmUvKtqf,https://open.spotify.com/track/7KokYm8cMIXCsGVmUvKtqf
 mastermind,Midnights,8,8,1,2,3,2,2,2,2,2,"Once upon a time, the planets and the fates
  And all the stars aligned
  You and I ended up in the same room
@@ -9952,7 +9952,7 @@ mastermind,Midnights,8,8,1,2,3,2,2,2,2,2,"Once upon a time, the planets and the 
  You knew that I'm a mastermind
  And now you're mine
  Yeah, all you did was smile
- 'Cause I'm a mastermind "
+ 'Cause I'm a mastermind ",7FmYn9e7KHMXcxqGSj9LjH,https://open.spotify.com/track/7FmYn9e7KHMXcxqGSj9LjH
 the great war,Midnights,-2,8,-3,-2,3,0,2,3,3,0,"My knuckles were bruised like violets
  Sucker punching walls, cursed you as I sleep-talked
  Spineless in my tomb of silence
@@ -10016,7 +10016,7 @@ the great war,Midnights,-2,8,-3,-2,3,0,2,3,3,0,"My knuckles were bruised like vi
  I will always be yours
  'Cause we survived the Great War
  Uh-huh
- I vow I will always be yours "
+ I vow I will always be yours ",0wavGRldH0AWyu2zvTz8zb,https://open.spotify.com/track/0wavGRldH0AWyu2zvTz8zb
 bigger than the whole sky,Midnights,-4,-6,0,-3,-3,2,-1,-3,0,-2,"No words appear before me in the aftermath
  Salt streams out my eyes and into my ears
  Every single thing I touch becomes sick with sadness
@@ -10060,7 +10060,7 @@ bigger than the whole sky,Midnights,-4,-6,0,-3,-3,2,-1,-3,0,-2,"No words appear 
  I've got a lot to live without
  I'm never gonna meet
  What could've been, would've been
- What should've been you "
+ What should've been you ",0BiqmkasE5FdrChwKfVp8X,https://open.spotify.com/track/0BiqmkasE5FdrChwKfVp8X
 paris,Midnights,6,6,1,2,1,2,1,2,1,2,"""Your ex-friend's sister
  Met someone at a club and he kissed her
  Turns out, it was that guy you hooked up with ages ago
@@ -10120,7 +10120,7 @@ paris,Midnights,6,6,1,2,1,2,1,2,1,2,"""Your ex-friend's sister
  'Cause we were in Paris
  Yes, we were somewhere else
  My love, we were in Paris
- Yes, we were somewhere else "
+ Yes, we were somewhere else ",5tWxKWq1DSP1s9WQ5PWuqu,https://open.spotify.com/track/5tWxKWq1DSP1s9WQ5PWuqu
 high infidelity,Midnights,-1,-9,-2,-1,2,0,-2,-2,-2,-3,"Lock broken, slur spoken
  Wound open, game token
  I didn't know you were keeping count
@@ -10184,7 +10184,7 @@ high infidelity,Midnights,-1,-9,-2,-1,2,0,-2,-2,-2,-3,"Lock broken, slur spoken
  Rain soaking, blind hoping
  You said I was freeloading
  I didn't know you were keeping count
- But, oh, you were keeping count "
+ But, oh, you were keeping count ",5kiZGSxgqPdv6rbqL9THdd,https://open.spotify.com/track/5kiZGSxgqPdv6rbqL9THdd
 glitch,Midnights,1,7,1,1,-1,0,2,2,2,1,"We were supposed to be just friends
  You don't live in my part of town, but maybe I'll see you out some weekend
  Depending on what kind of mood and situationship I'm in
@@ -10221,7 +10221,7 @@ glitch,Midnights,1,7,1,1,-1,0,2,2,2,1,"We were supposed to be just friends
  And I'm not even sorry, nights are so starry
  Blood moonlit
  It must be counterfeit (It must be counterfeit)
- I think there's been a glitch "
+ I think there's been a glitch ",7C0w28EsX0Um2FrZs9gso2,https://open.spotify.com/track/7C0w28EsX0Um2FrZs9gso2
 "would've, could've, should've",Midnights,-3,-4,-2,-1,-2,2,-2,-1,0,-1,"If you would've blinked, then I would've
  Looked away at the first glance
  If you tasted poison, you could've
@@ -10305,7 +10305,7 @@ glitch,Midnights,1,7,1,1,-1,0,2,2,2,1,"We were supposed to be just friends
  I fight with you in my sleep
  The wound won't close
  I keep on waiting for a sign
- I regret you all the time "
+ I regret you all the time ",4txojlesMFQZGWxwz2EeqB,https://open.spotify.com/track/4txojlesMFQZGWxwz2EeqB
 dear reader,Midnights,1,-1,-2,-2,3,2,0,0,1,-2,"Dear reader, if it feels like a trap
  You're already in one
  Dear reader, get out your map
@@ -10348,4 +10348,4 @@ dear reader,Midnights,1,-1,-2,-2,3,2,0,0,1,-2,"Dear reader, if it feels like a t
  But I shine so bright
  You should find another, you should find another (Guiding light)
  Find another, you should find another
- You should find another "
+ You should find another ",10GRRCR5fctuOF4GFmATJI,https://open.spotify.com/track/10GRRCR5fctuOF4GFmATJI

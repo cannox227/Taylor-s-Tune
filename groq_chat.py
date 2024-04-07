@@ -258,10 +258,10 @@ def main():
                 limit=5
             )
 
-            song_from_scores_db = "\n".join([ song.payload['metadata']['song_name'] for song in score_res])
+            song_from_scores_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in score_res])
             print(f"Song from score db: \n{song_from_scores_db}\n")
 
-            song_from_song_db = "\n".join([ song.payload['metadata']['song_name'] for song in song_res])
+            song_from_song_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in song_res])
             print(f"Song from lyrics db: \n{song_from_song_db}\n")
             
             prompt_template = ChatPromptTemplate.from_messages(
@@ -271,7 +271,8 @@ def main():
                                    You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
                                    First of all you have to highlight a maximum of 5 keywords from the user input.
                                    Then you have to tell to the user which is the most relevant feeling the user is having.
-                                   Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. Use the following context to help in your suggestion {song_from_scores_db} and {song_from_song_db}. These two contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. Select and present some of the most suitable songs from both of the databases and make this fact clear to the user
+                                   Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. Use the following context to help in your suggestion {song_from_scores_db} and {song_from_song_db}. The first item of each pair is the song name, and the second item of the pair is the Spotify link of the song. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
+                                   Select and present some of the most suitable songs and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
 
                                    Based on the user prompt try to assume to be the user and try to answer the following 6 questions giving a score from 1 to 7 for each one.
 
@@ -345,7 +346,7 @@ def main():
 
                                    You should return:
                                    - A message that contains the most relevant feeling the user is having.
-                                   - The most suitable songs from the emotional score database and the lyrics semantic database, make it clear to the user what each database represents. Do not include the score of the songs.
+                                   - The most suitable songs and their Spotify link from the emotional score database and the lyrics semantic database. Remember that the Spotify link is part after the colon of the song name. Make it clear to the user what each database represents. Do not include the score of the songs.
                                    - The number of the answer for each question. The answer should be formatted in a way that each question has its own line with the question, the score, and the reasoning behind that score.
                                  Do not inlcude the scores predicted in the previous prompt to the answer. Those criteria are only to extract the context from the database and they are not needed for the answer here
                         """)
