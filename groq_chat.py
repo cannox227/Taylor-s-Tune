@@ -1,10 +1,20 @@
 import streamlit as st
+import pandas as pd
+from pathlib import Path
 from typing import Generator
 from langchain.chains import ConversationChain 
 from langchain_core.messages import SystemMessage
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory  
 from langchain_groq import ChatGroq  
-from langchain.prompts import HumanMessagePromptTemplate, ChatPromptTemplate  
+from langchain.prompts import HumanMessagePromptTemplate, ChatPromptTemplate
+import qdrant_client as qc
+from qdrant_client.http.models import *
+from torch import cuda
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+import os
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
         """Yield chat response content from the Groq API response."""
@@ -17,11 +27,25 @@ def get_response_given_dict(raw_llm_output: dict) -> str:
     return raw_llm_output["response"]
 
 def main():
+
+    qdrant_client = qc.QdrantClient("https://22947c02-0f88-4954-9d59-e8fe9117b2d1.us-east4-0.gcp.cloud.qdrant.io", api_key=st.secrets['QDRANT_API_KEY'])
+    collection_name = 'Taylor_Song_DataBase_full_lyrics'
+    grade_collection_name = 'Grades_collection'
+
+    embed_model_id = 'sentence-transformers/all-MiniLM-L6-v2'
+
+    device = f'cuda:{cuda.current_device()}' if cuda.is_available() else 'cpu'
+
+    embed_model = HuggingFaceEmbeddings(
+        model_name=embed_model_id,
+        model_kwargs={'device': device},
+        encode_kwargs={'device': device}
+    )
     
     st.set_page_config(page_title="Taylor's Tune", page_icon="🎵")
     st.title("Taylor's Tune")
 
-    st.image("media/ts-wallpaper.webp")
+    st.image("C:/Users/dng09/Desktop/Project/Taylor-s-Tune/media/ts-wallpaper.webp")
     st.subheader("Find the best Taylor Swift song based on your mood", divider="rainbow", anchor=False)
 
     # Initialize chat history and selected model
@@ -119,14 +143,136 @@ def main():
         # Fetch response from Groq API
         try:
             # Define a prompt template with specific task instructions
-            prompt_template = ChatPromptTemplate.from_messages(
+            prompt_template_score = ChatPromptTemplate.from_messages(
                 [
                     SystemMessage(
                         content = ("""
+                                   You are an AI assistant that has to detect the score for each criteria from the user's input. The scores are explained below:
+                                   Criteria 1: Feelings of self
+                                   -3 - Feels fully responsible for problems
+                                   -2 - Feels partial responsibility for problems 
+                                   -1 - Hints at self-deprecation 
+                                   0  - No feelings mentioned/ambiguous feelings 
+                                   1  - Overall positive with serious insecurities 
+                                   2  - Overall positive with some reservations
+                                   3  - Secure and trusting in life circumstances 
+
+                                   Criteria 2: Glass half full
+                                   -3 - All imagery is depressing 
+                                   -2 - Nearly all depressing imagery  
+                                   -1 - Majority depressing imagery
+                                   0  - Equal amounts of happy and sad imagery  
+                                   1  - Majority positive imagery
+                                   2  - Nearly all positive imagery
+                                   3  - All imagery is positive 
+
+                                   Criteria 3: Stages of depression
+                                   -3 - Anger / Depression
+                                   -2 - Bargaining
+                                   -1 - Denial
+                                   0  - Acceptance. If you don't know what to give, just give this score
+                                   1  - Passively wanting to be happy 
+                                   2  - Actively working for her happiness 
+                                   3  - Actively working for her own and others' happiness
+
+                                   Criteria 4: Tempo
+                                   0 - No tempo, this is not a song
+
+                                   Criteria 5: Seriousness
+                                   -3 - Cataclysmic past offenses 
+                                   -2 - Some past hurt feelings
+                                   -1 - Unspecified relationship endings
+                                   0  - Not discussed/Pining
+                                   1  - Puppy love/One night stand 
+                                   2  - Some real world things to discuss
+                                   3  - Discussion of marriage/equally serious topics
+
+                                   Criteria 6: Future prospects
+                                   -3 - Permanent end to communication 
+                                   -2 - Significant decrease in contact 
+                                   -1 - Possible decrease in contact 
+                                   0  - No discussion of future/Ambiguous 
+                                   1  - Casual or potential future plans  
+                                   2  - Some set future plans
+                                   3  - Marriage/Bound for life 
+
+                                   Criteria 7: Feelings of males
+                                   -3 - He tells all his friends he hates her
+                                   -2 - He makes a face when her name is mentioned but doesn't publicly hate on her 
+                                   -1 - He doesn't want to date but likes her as a friend
+                                   0  - No information/Ambiguous. If you're not sure, also give this score
+                                   1  - He expressed casual interest in a relationship
+                                   2  - They are dating but not that seriously (she hasn't met his parents)
+                                   3  - Public declaration of love/commitment
+
+                                   Criteria 8: Togetherness
+                                   -3 - Barriers to joint actions 
+                                   -2 - No joint actions 
+                                   -1 - More things apart than together 
+                                   0  - Equal amounts of time together and apar
+                                   1  - More things together than apart 
+                                   2  - They do everything together
+                                   3  - No identity as an individual 
+
+                                   If you think the criteria are not applicable in the situation. Give the score 0.
+                                   
+                                   This is your only goal. Don't try to do anything else.
+                                   If the user input is not clear, you have to ask the user to provide more details. 
+                                   Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
+                                   If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
+
+                                   You should return:
+                                   - Only the score of 8 criterias. Give the score as a list of 8 numbers corresponding to each score, seperated by a comma. The list should begin with a square bracket and also end with a square bracket. No explanation before or after needed. Remember, the scores need to be a number between -3 and 3, no other symbols are allowed.
+                                   - Nothing more than that. Just the score in the format above only. This conversation should not be influenced other questions or prompts.
+
+                        """)
+                    ),
+                    HumanMessagePromptTemplate.from_template("{text}")
+                ]
+            )
+
+
+            # Insert the user input into the prompt template
+            human_input = prompt
+            prompt_score = prompt_template_score.format_messages(text=human_input)
+            # Send the prompt to the conversation chain
+            
+            message_score = conversation.invoke(prompt_score)
+
+            ai_scores = get_response_given_dict(message_score)
+            print(ai_scores)
+            query_grades = [int(x.strip()) for x in ai_scores.split('[')[1].split(']')[0].split(',')]
+            query_grades.insert(0, sum(query_grades[:4]))
+            query_grades.insert(1, sum(query_grades[5:]))
+
+            score_res = qdrant_client.search(
+                collection_name = grade_collection_name,
+                query_vector = query_grades,
+                limit=5
+            )
+
+            query_text = embed_model.embed_documents([human_input])[0]
+            song_res = qdrant_client.search(
+                collection_name = collection_name,
+                query_vector = query_text,
+                limit=5
+            )
+
+            song_from_scores_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in score_res])
+            print(f"Song from score db: \n{song_from_scores_db}\n")
+
+            song_from_song_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in song_res])
+            print(f"Song from lyrics db: \n{song_from_song_db}\n")
+            
+            prompt_template = ChatPromptTemplate.from_messages(
+                [
+                    SystemMessage(
+                        content = (f"""
                                    You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
                                    First of all you have to highlight a maximum of 5 keywords from the user input.
                                    Then you have to tell to the user which is the most relevant feeling the user is having.
-                                   Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. 
+                                   Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. Use the following context to help in your suggestion {song_from_scores_db} and {song_from_song_db}. The first item of each pair is the song name, and the second item of the pair is the Spotify link of the song. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
+                                   Select and present some of the most suitable songs and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
 
                                    Based on the user prompt try to assume to be the user and try to answer the following 6 questions giving a score from 1 to 7 for each one.
 
@@ -199,19 +345,17 @@ def main():
                                    If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
 
                                    You should return:
-                                   - a message that contains the most relevant feeling the user is having.
-                                   - a Taylor Swift song that is compatible with the user mood.
-                                   - the scores for each question.
-
+                                   - A message that contains the most relevant feeling the user is having.
+                                   - The most suitable songs and their Spotify link from the emotional score database and the lyrics semantic database. Remember that the Spotify link is part after the colon of the song name. Make it clear to the user what each database represents. Do not include the score of the songs.
+                                   - The number of the answer for each question. The answer should be formatted in a way that each question has its own line with the question, the score, and the reasoning behind that score.
+                                 Do not inlcude the scores predicted in the previous prompt to the answer. Those criteria are only to extract the context from the database and they are not needed for the answer here
                         """)
                     ),
                     HumanMessagePromptTemplate.from_template("{text}")
                 ]
             )
 
-            # Insert the user input into the prompt template
             prompt = prompt_template.format_messages(text=prompt)
-            # Send the prompt to the conversation chain
             message = conversation.invoke(prompt)
 
             # Store the message in the chat history
