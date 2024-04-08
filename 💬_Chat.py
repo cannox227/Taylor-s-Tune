@@ -12,9 +12,12 @@ from qdrant_client.http.models import *
 from torch import cuda
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 import os
+import logging
+from ts_questionaire import *
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
+logger = logging.getLogger()
+logging.basicConfig(level=logging.INFO)
 
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
         """Yield chat response content from the Groq API response."""
@@ -28,7 +31,7 @@ def get_response_given_dict(raw_llm_output: dict) -> str:
 
 def main():
 
-    qdrant_client = qc.QdrantClient("https://22947c02-0f88-4954-9d59-e8fe9117b2d1.us-east4-0.gcp.cloud.qdrant.io", api_key=st.secrets['QDRANT_API_KEY'])
+    qdrant_client = qc.QdrantClient(st.secrets['QDRANT_CLIENT_URL'], api_key=st.secrets['QDRANT_API_KEY'])
     collection_name = 'Taylor_Song_DataBase_full_lyrics'
     grade_collection_name = 'Grades_collection'
 
@@ -42,12 +45,15 @@ def main():
         encode_kwargs={'device': device}
     )
     
+    criteria = ['feelings of self', 'glass half full', 'stages of depression', 'tempo', 'seriousness', 'future prospects', 'feeling of male', 'togetherness']
+
     st.set_page_config(page_title="Taylor's Tune", page_icon="🎵")
     st.title("Taylor's Tune")
 
-    st.image("C:/Users/dng09/Desktop/Project/Taylor-s-Tune/media/ts-wallpaper.webp")
+    st.image("media/ts-wallpaper.webp")
     st.subheader("Find the best Taylor Swift song based on your mood", divider="rainbow", anchor=False)
 
+    st.markdown("*Try to explain how do you feel in the chat and the agent will help you finding the most suited Taylor Swift songs for you!*")
     # Initialize chat history and selected model
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -79,6 +85,8 @@ def main():
             st.session_state.selected_model = model_option
 
         max_tokens_range = models[model_option]["tokens"]
+
+        qdrant_query_limit = st.slider(min_value=1, max_value=5, value=3, label="Number of song suggestions", help="Select the maximum number of songs that will be suggest based on your mood")
         # Layout for model selection and max_tokens slider
         col1, col2 = st.columns(2)
         with col1: 
@@ -86,7 +94,7 @@ def main():
                 "Memory Length:",
                 min_value=1,
                 max_value=10,
-                value=5,
+                value=1,
                 help="Adjust the conversational memory length for the chatbot. This will affect the context of the conversation."
             )
         with col2:
@@ -110,9 +118,11 @@ def main():
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history=[]  # Initializing chat history if not present
     else:
-        for message in st.session_state.chat_history:
-            memory.chat_memory.add_user_message(message['input'])  # Saving previous chat context to memory
-            memory.chat_memory.add_ai_message(message['response'])
+        # TODO: enable again history
+        # for message in st.session_state.chat_history:
+        #     memory.chat_memory.add_user_message(message['input'])  # Saving previous chat context to memory
+        #     memory.chat_memory.add_ai_message(message['response'])
+        pass
     
     # Set up the Groq client 
     client = ChatGroq(
@@ -126,6 +136,8 @@ def main():
         llm=client,
         memory=memory,
     )
+
+    
 
     # Display chat messages from history on app rerun
     for message in st.session_state.messages:
@@ -142,12 +154,17 @@ def main():
 
         # Fetch response from Groq API
         try:
+            st.toast("Processing your input... 🤖")
             # Define a prompt template with specific task instructions
             prompt_template_score = ChatPromptTemplate.from_messages(
                 [
                     SystemMessage(
                         content = ("""
-                                   You are an AI assistant that has to detect the score for each criteria from the user's input. The scores are explained below:
+                                   You are an AI assistant that has to complete 2 tasks.
+                                   ---
+                                   Task 1: 
+                                   detect the score for each criteria from the user's input. 
+                                   The scores are explained below:
                                    Criteria 1: Feelings of self
                                    -3 - Feels fully responsible for problems
                                    -2 - Feels partial responsibility for problems 
@@ -216,64 +233,8 @@ def main():
 
                                    If you think the criteria are not applicable in the situation. Give the score 0.
                                    
-                                   This is your only goal. Don't try to do anything else.
-                                   If the user input is not clear, you have to ask the user to provide more details. 
-                                   Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
-                                   If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
-
-                                   You should return:
-                                   - Only the score of 8 criterias. Give the score as a list of 8 numbers corresponding to each score, seperated by a comma. The list should begin with a square bracket and also end with a square bracket. No explanation before or after needed. Remember, the scores need to be a number between -3 and 3, no other symbols are allowed.
-                                   - Nothing more than that. Just the score in the format above only. This conversation should not be influenced other questions or prompts.
-
-                        """)
-                    ),
-                    HumanMessagePromptTemplate.from_template("{text}")
-                ]
-            )
-
-
-            # Insert the user input into the prompt template
-            human_input = prompt
-            prompt_score = prompt_template_score.format_messages(text=human_input)
-            # Send the prompt to the conversation chain
-            
-            message_score = conversation.invoke(prompt_score)
-
-            ai_scores = get_response_given_dict(message_score)
-            print(ai_scores)
-            query_grades = [int(x.strip()) for x in ai_scores.split('[')[1].split(']')[0].split(',')]
-            query_grades.insert(0, sum(query_grades[:4]))
-            query_grades.insert(1, sum(query_grades[5:]))
-
-            score_res = qdrant_client.search(
-                collection_name = grade_collection_name,
-                query_vector = query_grades,
-                limit=5
-            )
-
-            query_text = embed_model.embed_documents([human_input])[0]
-            song_res = qdrant_client.search(
-                collection_name = collection_name,
-                query_vector = query_text,
-                limit=5
-            )
-
-            song_from_scores_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in score_res])
-            print(f"Song from score db: \n{song_from_scores_db}\n")
-
-            song_from_song_db = "\n".join([ ': '.join((song.payload['metadata']['song_name'], song.payload['metadata']['url'])) for song in song_res])
-            print(f"Song from lyrics db: \n{song_from_song_db}\n")
-            
-            prompt_template = ChatPromptTemplate.from_messages(
-                [
-                    SystemMessage(
-                        content = (f"""
-                                   You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
-                                   First of all you have to highlight a maximum of 5 keywords from the user input.
-                                   Then you have to tell to the user which is the most relevant feeling the user is having.
-                                   Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. Use the following context to help in your suggestion {song_from_scores_db} and {song_from_song_db}. The first item of each pair is the song name, and the second item of the pair is the Spotify link of the song. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
-                                   Select and present some of the most suitable songs and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
-
+                                   ---
+                                   Task 2: 
                                    Based on the user prompt try to assume to be the user and try to answer the following 6 questions giving a score from 1 to 7 for each one.
 
                                    For these first four questions, if you are in a relationship, answer them with respect to your current relationship. If you are not currently in a relationship, answer them by considering either your most recent past relationship, or a potential relationship on the horizon, whichever you prefer.
@@ -343,30 +304,162 @@ def main():
                                    If the user input is not clear, you have to ask the user to provide more details. 
                                    Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
                                    If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
-
+                                   If the user ask you for something missing from the previous prompt you have to ask the user to provide the missing information. Do not make up missing information!
                                    You should return:
-                                   - A message that contains the most relevant feeling the user is having.
-                                   - The most suitable songs and their Spotify link from the emotional score database and the lyrics semantic database. Remember that the Spotify link is part after the colon of the song name. Make it clear to the user what each database represents. Do not include the score of the songs.
-                                   - The number of the answer for each question. The answer should be formatted in a way that each question has its own line with the question, the score, and the reasoning behind that score.
-                                 Do not inlcude the scores predicted in the previous prompt to the answer. Those criteria are only to extract the context from the database and they are not needed for the answer here
+                                   - As first output the score of 8 criterias. Give the score as a list (called criteria list) of 8 numbers corresponding to each score, seperated by a comma. The list should begin with a square bracket and also end with a square bracket. No explanation before or after needed. Remember, the scores need to be a number between -3 and 3, no other symbols are allowed. The criteria list must have length 8, a different lenght is not allowed.
+                                   Do not forget to enclose the criteria list in square brackets. Do not send it as a list of numbers separated by commas without square brackets.
+                                   - As second output the score of the 6 questions. Give the score as a list (called question list) of 6 numbers corresponding to each question' score, seperated by a comma. The list should begin with a curly bracket and also end with a curly bracket. No explanation before or after needed. Remember, the scores need to be a number between 1 and 7, no other symbols are allowed. The question list must have length 6, a different lenght is not allowed.
+                                   Do not forget to enclose the question list in curly brackets. Do not send it as a list of numbers separated by commas without curly brackets.
+                                   - Nothing more than that. Just the score in the format above only. This conversation should not be influenced other questions or prompts.
                         """)
                     ),
                     HumanMessagePromptTemplate.from_template("{text}")
                 ]
             )
 
-            prompt = prompt_template.format_messages(text=prompt)
-            message = conversation.invoke(prompt)
 
+            # Insert the user input into the prompt template
+            human_input = prompt
+            prompt_score = prompt_template_score.format_messages(text=human_input)
+            # Send the prompt to the conversation chain
+            
+            message_score = conversation.invoke(prompt_score)
+
+            ai_tasks_reply = get_response_given_dict(message_score)
+
+            logger.info(f"\nAI tasks reply: {ai_tasks_reply}")
+
+            # TODO: try to understand if here the LLM understood or not the prompt
+            # TODO: handle tasks like this ans skip the second stage
+            # AI tasks reply: I'm sorry to hear that you're feeling this way, but I'm unable to provide scores for the criteria or answers to the questions as you've requested. However, I can provide some song suggestions based on your current feelings.
+
+            # 1. "the outside" - This song might resonate with your feelings of being on the outside looking in. Spotify link: https://open.spotify.com/track/2QA3IixpRcKyOdG7XDzRgv
+            # 2. "a place in this world" - This song fits your sentiment of trying to find your place. Spotify link: https://open.spotify.com/track/73OX8GdpOeGzKC6OvGSbsv
+            # 3. "how you get the girl" - This song might resonate with your hope of meeting someone new. Spotify link: https://open.spotify.com/track/733OhaXQIHY7BKtY3vnSkn
+            # 4. "right where you left me" - This song matches your current emotional state of being left behind. Spotify link: https://open.spotify.com/track/3zwMVvkBe2qIKDObWgXw4N
+            # 5. "invisible" - This song talks about feeling unnoticed and unappreciated, which might be a part of your current emotional experience. Spotify link: https://open.spotify.com/track/5OOd01o2YS1QFwdpVLds3r
+
+            # Remember, it's okay to feel sad and it's okay to hope for something new. Take your time to heal and when you're ready, the right person will come into your life.
+
+
+            logger.info(f"Criteria scores from first LLM output: ")
+            evaluation_error = False
+            try:
+                criterion_grades = [int(x.strip()) for x in ai_tasks_reply.split('[')[1].split(']')[0].split(',')]
+                assert len(criterion_grades) == 8, "Criteria list must have length 8"
+            except Exception as e:
+                st.toast('An error occurred while processing the user input. Please try again.')
+                logger.error(f"Error parsing criteria scores: {e}")
+                criterion_grades = [0, 0, 0, 0, 0, 0, 0, 0]
+                evaluation_error = True
+            
+            try:
+                questions_grades = [int(x.strip()) for x in ai_tasks_reply.split('{')[1].split('}')[0].split(',')] 
+                assert len(questions_grades) == 6, "Questions list must have length 8"
+            except Exception as e:
+                st.toast('An error occurred while processing the user input. Please try again.')
+                logger.error(f"Error parsing questions scores: {e}")
+                questions_grades = [0, 0, 0, 0, 0, 0]
+                evaluation_error = True
+            
+            if criterion_grades == [0, 0, 0, 0, 0, 0, 0, 0] or questions_grades == [0, 0, 0, 0, 0, 0]:
+                evaluation_error = True
+
+            if not evaluation_error:
+                logger.info(f"Criteria grades: {criterion_grades}")
+                logger.info(f"Questions grades: {questions_grades}")
+
+                if logger.level == logging.DEBUG:
+                    for idx, score in enumerate(criterion_grades):
+                        logger.debug(f"{criteria[idx]}: {score}") 
+                    for idx, score in enumerate(questions_grades):
+                        logger.debug(f"Question {idx+1}: {score}")
+
+                criterion_grades.insert(0, sum(criterion_grades[:4]))
+                criterion_grades.insert(1, sum(criterion_grades[5:]))
+
+                score_res = qdrant_client.search(
+                    collection_name = grade_collection_name,
+                    query_vector = criterion_grades,
+                    limit=qdrant_query_limit
+                )
+
+                query_text = embed_model.embed_documents([human_input])[0]
+                song_res = qdrant_client.search(
+                    collection_name = collection_name,
+                    query_vector = query_text,
+                    limit=qdrant_query_limit
+                )
+
+                song_from_scores_db = ""
+                song_from_song_db = ""
+
+                for song_score, song_lyrics in zip(score_res, song_res):
+                    song_from_scores_db += f"- {song_score.payload['metadata']['song_name']}, Spotify link: {song_score.payload['metadata']['url']}, lyrics: {song_score.payload['metadata']['description']}\n"
+                    song_from_song_db += f"- {song_lyrics.payload['metadata']['song_name']}, Spotify link: {song_lyrics.payload['metadata']['url']}, lyrics: {song_lyrics.payload['metadata']['description']}\n"
+
+                logger.info(f"\nSong from score db: \n{song_from_scores_db}\n")
+
+                logger.info(f"\nSong from lyrics db: \n{song_from_song_db}\n")
+
+                lib_predicted_songs = "\n".join(get_songs(questions_grades))
+                logger.info(f"Predicted songs: {lib_predicted_songs}")
+
+                # Prompt template for the AI response
+                # - Songs retrieved by a statistical model: {lib_predicted_songs}\n. 
+                
+                
+                prompt_template = ChatPromptTemplate.from_messages(
+                    [
+                        SystemMessage(
+                            content = (f"""
+                                    You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
+                                    First of all you have to highlight a maximum of 5 keywords from the user input.
+                                    Then you have to tell to the user which is the most relevant feeling the user is having.
+                                    Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. 
+                                    Use the following context to help in your suggestion:
+                                    - Songs retrieved by user emotion analysis: {song_from_scores_db}\n
+                                    - Songs retrieved according to lyrics matching: {song_from_song_db}\n
+                                    The first item of each pair is the song name, the second item of the pair is the Spotify link of the song and the third is the song description. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
+                                    Present all the songs for each database and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
+                                    Remember to include and show all the resulted songs and avoid mixing the result of one db with the other! {qdrant_query_limit*2} songs must be showed in total.
+
+                                    You should return a reponse that includes the following information:
+                                    - Your understanding of the user mood in natural language.
+                                    - Say to the user based on its input a maximum of 5 keywords that you detected.
+                                    - Say what are the main emotions or the general feelings perceived by the user message (a maximum of three and a minimum of one).
+                                    - All the {qdrant_query_limit} suggested songs from the emotion analysis.
+                                    - All the {qdrant_query_limit}suggested song based on the lyrics matching.
+                                    - Conclude the message with your personal suggestion on how to deal with the sentiments the user is feeling.
+
+                                    For each songs result, you should present the song name, the Spotify link and the given description of the meaning of that song.
+                                    Do not forget the Spotiky link!  If the Spotify link is not available or equal to "-" just write "Spotify link not available". Do not make up the Spotify link. 
+                                    Always answer in natural language and avoid to just report the data you have in the database (avoid to just copy and paste the data from the database with their keywords).
+
+                                    You must not return:
+                                    - Any previous criteria scores or the scores of the questions. Those criteria and questions are only to extract the context from the database and they are not needed for the answer here.
+                            """)
+                        ),
+                        HumanMessagePromptTemplate.from_template("{text}")
+                    ]
+                )
+
+                prompt = prompt_template.format_messages(text=prompt)
+                message = conversation.invoke(prompt)
+                ai_responses = get_response_given_dict(message)
+            else:
+                ai_responses = ai_tasks_reply
+                st.error("😕 An error occurred while processing the user input. Please try again.")
             # Store the message in the chat history
-            st.session_state.chat_history.append(message)  
+            if not evaluation_error: st.session_state.chat_history.append(message)  
 
             # Use the generator function with st.write_stream
             with st.chat_message("assistant", avatar="🤖"):
-                ai_responses = get_response_given_dict(message)
-                st.write(ai_responses)
+                if not evaluation_error: st.write(ai_responses)
+                else: st.write("I'm sorry, probably your input was not clear enough.😅 \n Please try again.🙏")
         except Exception as e:
-            st.error(e, icon="🚨")
+            st.error(f'{type(e).__name__,}\n{e}', icon="🚨")
+            conversation.memory.clear()
 
         # Append the full response to session_state.messages
         if isinstance(ai_responses, str):
@@ -375,8 +468,9 @@ def main():
         else:
             # Handle the case where full_response is not a string
             combined_response = "\n".join(str(item) for item in ai_responses)
-            st.session_state.messages.append(
-                {"role": "assistant", "content": combined_response})
-
+            if not evaluation_error: st.session_state.messages.append(
+                {"role": "assistant", "content": combined_response}) 
+    
+    
 if __name__ == "__main__":
     main()
