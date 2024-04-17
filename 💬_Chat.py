@@ -14,10 +14,12 @@ from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 import os
 import logging
 from ts_questionaire import *
+from data.prompts import evaluation_prompts
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO)
+evaluation_mode = False
 
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
         """Yield chat response content from the Groq API response."""
@@ -53,7 +55,7 @@ def main():
     st.image("media/ts-wallpaper.webp")
     st.subheader("Find the best Taylor Swift song based on your mood", divider="rainbow", anchor=False)
 
-    st.markdown("*Try to explain how do you feel in the chat and the agent will help you finding the most suited Taylor Swift songs for you!*")
+    st.markdown("*Try to explain how do you feel and your relationship status using the chat and the agent will help you finding the most suited Taylor Swift songs for you!*")
     # Initialize chat history and selected model
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -93,7 +95,7 @@ def main():
             conv_mem_length = st.slider(
                 "Memory Length:",
                 min_value=1,
-                max_value=10,
+                max_value=5,
                 value=1,
                 help="Adjust the conversational memory length for the chatbot. This will affect the context of the conversation."
             )
@@ -104,7 +106,7 @@ def main():
                 min_value=512,  # Minimum value to allow some flexibility
                 max_value=max_tokens_range,
                 # Default value or max allowed if less
-                value=min(32768, max_tokens_range),
+                value=2048,
                 step=512,
                 help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
             )
@@ -112,7 +114,7 @@ def main():
         st.button("Clear Chat History", on_click=lambda: [st.session_state.messages.clear(), st.toast('Chat history cleared 🧹')])
 
     # Initializing conversation memory with the selected length
-    memory=ConversationBufferWindowMemory(k=conv_mem_length)  
+    # memory=ConversationBufferWindowMemory(k=conv_mem_length)  
 
     # session state variable for storing chat history
     if 'chat_history' not in st.session_state:
@@ -134,7 +136,7 @@ def main():
     # Set up conversation chain with memory buffer
     conversation = ConversationChain(
         llm=client,
-        memory=memory,
+        #memory=memory,
     )
 
     
@@ -156,173 +158,112 @@ def main():
         try:
             st.toast("Processing your input... 🤖")
             # Define a prompt template with specific task instructions
+            
+            # PRE-PROMPT 1
+            
             prompt_template_score = ChatPromptTemplate.from_messages(
                 [
                     SystemMessage(
                         content = ("""
-                                   You are an AI assistant that has to complete 2 tasks.
-                                   ---
-                                   Task 1: 
-                                   detect the score for each criteria from the user's input. 
-                                   The scores are explained below:
-                                   Criteria 1: Feelings of self
-                                   -3 - Feels fully responsible for problems
-                                   -2 - Feels partial responsibility for problems 
-                                   -1 - Hints at self-deprecation 
-                                   0  - No feelings mentioned/ambiguous feelings 
-                                   1  - Overall positive with serious insecurities 
-                                   2  - Overall positive with some reservations
-                                   3  - Secure and trusting in life circumstances 
+You are an AI assistant that has to complete 2 tasks.
+---
+Task 1: 
+detect the score for each criteria from the user's input. 
+The scores are explained below:
+Criteria 1: Feelings of self
+-3 - Feels fully responsible for problems
+-2 - Feels partial responsibility for problems 
+-1 - Hints at self-deprecation 
+0  - No feelings mentioned/ambiguous feelings 
+1  - Overall positive with serious insecurities 
+2  - Overall positive with some reservations
+3  - Secure and trusting in life circumstances 
 
-                                   Criteria 2: Glass half full
-                                   -3 - All imagery is depressing 
-                                   -2 - Nearly all depressing imagery  
-                                   -1 - Majority depressing imagery
-                                   0  - Equal amounts of happy and sad imagery  
-                                   1  - Majority positive imagery
-                                   2  - Nearly all positive imagery
-                                   3  - All imagery is positive 
+Criteria 2: Glass half full
+-3 - All imagery is depressing 
+-2 - Nearly all depressing imagery  
+-1 - Majority depressing imagery
+0  - Equal amounts of happy and sad imagery  
+1  - Majority positive imagery
+2  - Nearly all positive imagery
+3  - All imagery is positive 
 
-                                   Criteria 3: Stages of depression
-                                   -3 - Anger / Depression
-                                   -2 - Bargaining
-                                   -1 - Denial
-                                   0  - Acceptance. If you don't know what to give, just give this score
-                                   1  - Passively wanting to be happy 
-                                   2  - Actively working for her happiness 
-                                   3  - Actively working for her own and others' happiness
+Criteria 3: Stages of depression
+-3 - Anger / Depression
+-2 - Bargaining
+-1 - Denial
+0  - Acceptance. If you don't know what to give, just give this score
+1  - Passively wanting to be happy 
+2  - Actively working for her happiness 
+3  - Actively working for her own and others' happiness
 
-                                   Criteria 4: Tempo
-                                   0 - No tempo, this is not a song
+Criteria 4: Tempo
+0 - No tempo, this is not a song
 
-                                   Criteria 5: Seriousness
-                                   -3 - Cataclysmic past offenses 
-                                   -2 - Some past hurt feelings
-                                   -1 - Unspecified relationship endings
-                                   0  - Not discussed/Pining
-                                   1  - Puppy love/One night stand 
-                                   2  - Some real world things to discuss
-                                   3  - Discussion of marriage/equally serious topics
+Criteria 5: Seriousness
+-3 - Cataclysmic past offenses 
+-2 - Some past hurt feelings
+-1 - Unspecified relationship endings
+0  - Not discussed/Pining
+1  - Puppy love/One night stand 
+2  - Some real world things to discuss
+3  - Discussion of marriage/equally serious topics
 
-                                   Criteria 6: Future prospects
-                                   -3 - Permanent end to communication 
-                                   -2 - Significant decrease in contact 
-                                   -1 - Possible decrease in contact 
-                                   0  - No discussion of future/Ambiguous 
-                                   1  - Casual or potential future plans  
-                                   2  - Some set future plans
-                                   3  - Marriage/Bound for life 
+-3 - Permanent end to communication 
+-2 - Significant decrease in contact 
+-1 - Possible decrease in contact 
+0  - No discussion of future/Ambiguous 
+1  - Casual or potential future plans  
+2  - Some set future plans
+3  - Marriage/Bound for life 
 
-                                   Criteria 7: Feelings of males
-                                   -3 - He tells all his friends he hates her
-                                   -2 - He makes a face when her name is mentioned but doesn't publicly hate on her 
-                                   -1 - He doesn't want to date but likes her as a friend
-                                   0  - No information/Ambiguous. If you're not sure, also give this score
-                                   1  - He expressed casual interest in a relationship
-                                   2  - They are dating but not that seriously (she hasn't met his parents)
-                                   3  - Public declaration of love/commitment
+Criteria 7: Feelings of males
+-3 - He tells all his friends he hates her
+-2 - He makes a face when her name is mentioned but doesn't publicly hate on her 
+-1 - He doesn't want to date but likes her as a friend
+0  - No information/Ambiguous. If you're not sure, also give this score
+1  - He expressed casual interest in a relationship
+2  - They are dating but not that seriously (she hasn't met his parents)
+3  - Public declaration of love/commitment
 
-                                   Criteria 8: Togetherness
-                                   -3 - Barriers to joint actions 
-                                   -2 - No joint actions 
-                                   -1 - More things apart than together 
-                                   0  - Equal amounts of time together and apar
-                                   1  - More things together than apart 
-                                   2  - They do everything together
-                                   3  - No identity as an individual 
+Criteria 8: Togetherness
+-3 - Barriers to joint actions 
+-2 - No joint actions 
+-1 - More things apart than together 
+0  - Equal amounts of time together and apar
+1  - More things together than apart 
+2  - They do everything together
+3  - No identity as an individual 
 
-                                   If you think the criteria are not applicable in the situation. Give the score 0.
-                                   
-                                   ---
-                                   Task 2: 
-                                   Based on the user prompt try to assume to be the user and try to answer the following 6 questions giving a score from 1 to 7 for each one.
-
-                                   For these first four questions, if you are in a relationship, answer them with respect to your current relationship. If you are not currently in a relationship, answer them by considering either your most recent past relationship, or a potential relationship on the horizon, whichever you prefer.
-    
-                                   Question 1
-                                    Which of these best describes your relationship?
-                                    1 - Our relationship ended because of cataclysmic past offenses. OR Our relationship has some serious problems.
-                                    2 - My feelings were a bit hurt when our relationship ended. OR Our relationship is going ok but has some problems.
-                                    3 - Our relationship ended, but not in a horribly bad way. It just ended. OR I feel pretty mediocre about the quality of our relationship.
-                                    4 - I wish I was in a relationship, but I don't think it will happen right now. OR I'm happy without a relationship right now.
-                                    5 - My relationship is pretty casual at the moment, not official or anything. OR I look back fondly on my past relationship, without feeling hurt or angry.
-                                    6 - My relationship is going well and we're thinking about long-term commitment.
-                                    7 - I'm getting married and/or comitting to this relationship for the rest of my life.
-                                
-                                   Question 2
-                                   What does the future of your relationship look like?
-                                    1 - We're never speaking again.
-                                    2 - We're probably going to see each other again at some point, but we won't be in touch much at all.
-                                    3 - We might talk a bit less than we did in the past.
-                                    4 - I'm not sure what our future is.
-                                    5 - We've got some casual future plans but nothing serious lined up. OR We might hang out but I'm not sure.
-                                    6 - We're going to be spending a fair amount of time together in the future.
-                                    7 - We're going to be spending a large amount of time together. Like maybe getting married.
-                                
-                                   Question 3
-                                   	What are the other person's feelings about you?
-                                    1 - They've told me they hate me.
-                                    2 - I think they don't like me that much. OR They've insulted me some.
-                                    3 - They're nice to me but they see me as just a friend.
-                                    4 - I'm not sure and/or they haven't made it clear to me.
-                                    5 - They maybe have some non-platonic feelings for me but I'm not sure how strong they are.
-                                    6 - They've told me that they have some feelings for me.
-                                    7 - They have openly declared their love for me to the world.
-                                   
-                                   Question 4
-                                   	Which of these best describes how you spend your time together?
-                                    1 - There are significant barriers that prevent us from being together.
-                                    2 - There aren't any insurmountable barriers between us, but we never do anything together.
-                                    3 - We do some things together but spend most of our time doing things alone.
-                                    4 - We do about the same amount of stuff together as we do alone.
-                                    5 - We do some things alone but spend most of our time doing things together.
-                                    6 - We do pretty much everything together.
-                                    7 - We do everything together, and even when we aren't together I only think about us being together.
-
-                                    For these next two questions, think about how you feel about your life overall.
-                                    Question 5
-                                    Which of these best describes how you feel about yourself?
-                                    1 - I have a lot of problems and they're all my fault.
-                                    2 - I have a lot of problems, but I don't think they're all my fault.
-                                    3 - I don't have a ton of significant problems, but sometimes I think I could do better.
-                                    4 - I'm not really sure how I feel.
-                                    5 - I feel pretty good about myself, and am just a little insecure on occasion.
-                                    6 - I have a few concerns but feel very good overall.
-                                    7 - I'm awesome, my life is awesome, this is the bomb.
-                                   
-                                   Question 6
-                                   Which of these describes your emotional state?
-                                    1 - You're really angry about something and/or really depressed about something.
-                                    2 - You don't like how your life is going and you just want to make a deal to get your old life back.
-                                    3 - You know something's wrong with your life but you want to ignore it.
-                                    4 - You've accepted the bad things that have happened to you and are ready to move on from them.
-                                    5 - You're feeling pretty neutral and you're waiting for life to make you happy.
-                                    6 - You're actively working to make yourself happy.
-                                    7 - You're actively working to make yourself happy and trying to make sure that everyone else is happy too.
-
-                                   This is your only goal. Don't try to do anything else.
-                                   If the user input is not clear, you have to ask the user to provide more details. 
-                                   Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
-                                   If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
-                                   If the user ask you for something missing from the previous prompt you have to ask the user to provide the missing information. Do not make up missing information!
-                                   You should return:
-                                   - As first output the score of 8 criterias. Give the score as a list (called criteria list) of 8 numbers corresponding to each score, seperated by a comma. The list should begin with a square bracket and also end with a square bracket. No explanation before or after needed. Remember, the scores need to be a number between -3 and 3, no other symbols are allowed. The criteria list must have length 8, a different lenght is not allowed.
-                                   Do not forget to enclose the criteria list in square brackets. Do not send it as a list of numbers separated by commas without square brackets.
-                                   - As second output the score of the 6 questions. Give the score as a list (called question list) of 6 numbers corresponding to each question' score, seperated by a comma. The list should begin with a curly bracket and also end with a curly bracket. No explanation before or after needed. Remember, the scores need to be a number between 1 and 7, no other symbols are allowed. The question list must have length 6, a different lenght is not allowed.
-                                   Do not forget to enclose the question list in curly brackets. Do not send it as a list of numbers separated by commas without curly brackets.
-                                   - Nothing more than that. Just the score in the format above only. This conversation should not be influenced other questions or prompts.
+If you think the criteria are not applicable in the situation. Give the score 0.
+---- 
+This is your only goal. Don't try to do anything else.
+If the user input is not clear, you have to ask the user to provide more details. 
+Like explaining what he/she is feeling or provide a specific episode that is related to the user mood.
+If the user ask you something else, or ask for a clarification, you have just to explain what is your goal.
+If the user ask you for something missing from the previous prompt you have to ask the user to provide the missing information. Do not make up missing information!
+You should return:
+- As first output the score of 8 criterias. Give the score as a list (called criteria list) of 8 numbers corresponding to each score, seperated by a comma. The list should begin with a square bracket and also end with a square bracket. No explanation before or after needed. Remember, the scores need to be a number between -3 and 3, no other symbols are allowed. The criteria list must have length 8, a different lenght is not allowed.
+Do not forget to enclose the criteria list in square brackets. Do not send it as a list of numbers separated by commas without square brackets.
+- For each element of the list just one numerical value from -3 to 3 should be present, no other words or interadiate values are allowed.
+- Here is an example of the format you should use:
+The criteria list is: [3, 3, 0, 0, 0, 3, 0, 0]
+- Always report the criteria lists. Do not forget to report it in the proper format.
+- Nothing more than that. Just the score in the format above only. This conversation should not be influenced other questions or prompts.
                         """)
                     ),
                     HumanMessagePromptTemplate.from_template("{text}")
                 ]
             )
 
-
+            if evaluation_mode:
+                prompt_template = evaluation_prompts.evaluation_prompt
+            
             # Insert the user input into the prompt template
             human_input = prompt
             prompt_score = prompt_template_score.format_messages(text=human_input)
             # Send the prompt to the conversation chain
-            
+             
             message_score = conversation.invoke(prompt_score)
 
             ai_tasks_reply = get_response_given_dict(message_score)
@@ -353,27 +294,29 @@ def main():
                 criterion_grades = [0, 0, 0, 0, 0, 0, 0, 0]
                 evaluation_error = True
             
-            try:
-                questions_grades = [int(x.strip()) for x in ai_tasks_reply.split('{')[1].split('}')[0].split(',')] 
-                assert len(questions_grades) == 6, "Questions list must have length 8"
-            except Exception as e:
-                st.toast('An error occurred while processing the user input. Please try again.')
-                logger.error(f"Error parsing questions scores: {e}")
-                questions_grades = [0, 0, 0, 0, 0, 0]
-                evaluation_error = True
-            
-            if criterion_grades == [0, 0, 0, 0, 0, 0, 0, 0] or questions_grades == [0, 0, 0, 0, 0, 0]:
-                evaluation_error = True
+            if evaluation_mode:
+                try:
+                    questions_grades = [int(x.strip()) for x in ai_tasks_reply.split('{')[1].split('}')[0].split(',')] 
+                    assert len(questions_grades) == 6, "Questions list must have length 8"
+                except Exception as e:
+                    st.toast('An error occurred while processing the user input. Please try again.')
+                    logger.error(f"Error parsing questions scores: {e}")
+                    questions_grades = [0, 0, 0, 0, 0, 0]
+                    evaluation_error = True
+                
+                if criterion_grades == [0, 0, 0, 0, 0, 0, 0, 0] or questions_grades == [0, 0, 0, 0, 0, 0]:
+                    evaluation_error = True
 
             if not evaluation_error:
                 logger.info(f"Criteria grades: {criterion_grades}")
-                logger.info(f"Questions grades: {questions_grades}")
+                if evaluation_mode: logger.info(f"Questions grades: {questions_grades}")
 
                 if logger.level == logging.DEBUG:
                     for idx, score in enumerate(criterion_grades):
                         logger.debug(f"{criteria[idx]}: {score}") 
-                    for idx, score in enumerate(questions_grades):
-                        logger.debug(f"Question {idx+1}: {score}")
+                    if evaluation_mode:
+                        for idx, score in enumerate(questions_grades):
+                            logger.debug(f"Question {idx+1}: {score}")
 
                 criterion_grades.insert(0, sum(criterion_grades[:4]))
                 criterion_grades.insert(1, sum(criterion_grades[5:]))
@@ -402,64 +345,73 @@ def main():
 
                 logger.info(f"\nSong from lyrics db: \n{song_from_song_db}\n")
 
-                lib_predicted_songs = "\n".join(get_songs(questions_grades))
-                logger.info(f"Predicted songs: {lib_predicted_songs}")
+                if evaluation_mode:
+                    lib_predicted_songs = "\n".join(get_songs(questions_grades))
+                    logger.info(f"Predicted songs: {lib_predicted_songs}")
 
                 # Prompt template for the AI response
                 # - Songs retrieved by a statistical model: {lib_predicted_songs}\n. 
                 
-                
+                # PRE-PROMPT 2
                 prompt_template = ChatPromptTemplate.from_messages(
                     [
                         SystemMessage(
                             content = (f"""
-                                    You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
-                                    First of all you have to highlight a maximum of 5 keywords from the user input.
-                                    Then you have to tell to the user which is the most relevant feeling the user is having.
-                                    Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. 
-                                    Use the following context to help in your suggestion:
-                                    - Songs retrieved by user emotion analysis: {song_from_scores_db}\n
-                                    - Songs retrieved according to lyrics matching: {song_from_song_db}\n
-                                    The first item of each pair is the song name, the second item of the pair is the Spotify link of the song and the third is the song description. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
-                                    Present all the songs for each database and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
-                                    Remember to include and show all the resulted songs and avoid mixing the result of one db with the other! {qdrant_query_limit*2} songs must be showed in total.
+You are an AI assistant that has two goals: detecting the user mood and suggest a Taylor Swift song compatible with the user mood.
+First of all you have to highlight a maximum of 5 keywords from the user input.
+Then you have to tell to the user which is the most relevant feeling the user is having.
+Finally, based on the user mood you have to suggest a Taylor Swift song that is compatible with the user mood. 
+Use the following context to help in your suggestion:
+- Songs retrieved by user emotion analysis: {song_from_scores_db}\n
+- Songs retrieved according to lyrics matching: {song_from_song_db}\n
+The first item of each pair is the song name, the second item of the pair is the Spotify link of the song and the third is the song description. These contexts are from two different database. The former is based on the emotional scores measured from the user text, while the second one is based on semantic analysis of the input. In each of the context, the first song is the best fit, the last song is the least fit. 
+Present all the songs for each database and the corresponding Spotify link (the item after the colon) from both of the databases and make this fact clear to the user. 
+Remember to include and show all the resulted songs and avoid mixing the result of one db with the other! {qdrant_query_limit*2} songs must be showed in total.
 
-                                    You should return a reponse that includes the following information:
-                                    - Your understanding of the user mood in natural language.
-                                    - Say to the user based on its input a maximum of 5 keywords that you detected.
-                                    - Say what are the main emotions or the general feelings perceived by the user message (a maximum of three and a minimum of one).
-                                    - All the {qdrant_query_limit} suggested songs from the emotion analysis.
-                                    - All the {qdrant_query_limit}suggested song based on the lyrics matching.
-                                    - Conclude the message with your personal suggestion on how to deal with the sentiments the user is feeling.
+You should return a reponse that includes the following information:
+- Your understanding of the user mood in natural language.
+- Say to the user based on its input a maximum of 5 keywords that you detected.
+- Say what are the main emotions or the general feelings perceived by the user message (a maximum of three and a minimum of one).
+- All the {qdrant_query_limit} suggested songs from the emotion analysis.
+- All the {qdrant_query_limit}suggested song based on the lyrics matching.
+- Conclude the message with your personal suggestion on how to deal with the sentiments the user is feeling.
 
-                                    For each songs result, you should present the song name, the Spotify link and the given description of the meaning of that song.
-                                    Do not forget the Spotiky link!  If the Spotify link is not available or equal to "-" just write "Spotify link not available". Do not make up the Spotify link. 
-                                    Always answer in natural language and avoid to just report the data you have in the database (avoid to just copy and paste the data from the database with their keywords).
+For each songs result, you should present the song name, the Spotify link and the given description of the meaning of that song.
+Do not forget the Spotiky link!  If the Spotify link is not available or equal to "-" just write "Spotify link not available". Do not make up the Spotify link. 
+Always answer in natural language and avoid to just report the data you have in the database (avoid to just copy and paste the data from the database with their keywords).
 
-                                    You must not return:
-                                    - Any previous criteria scores or the scores of the questions. Those criteria and questions are only to extract the context from the database and they are not needed for the answer here.
-                            """)
+You must not return:
+- Any previous criteria scores or the scores of the questions. Those criteria and questions are only to extract the context from the database and they are not needed for the answer here.
+""")
                         ),
                         HumanMessagePromptTemplate.from_template("{text}")
                     ]
                 )
-
+                
                 prompt = prompt_template.format_messages(text=prompt)
-                message = conversation.invoke(prompt)
+                conversation.memory.clear()
+                logger.info(f"PROMPT USING SECOND PREPRPOMPT {prompt}")
+                try:
+                    message = conversation.invoke(prompt)
+                except Exception as e:
+                   with st.chat_message("assistant", avatar="🤖"):
+                        st.write(f"High request rate please wait\n{e}") 
+                logger.info(f"AI response DEBUG: {message}")
                 ai_responses = get_response_given_dict(message)
             else:
                 ai_responses = ai_tasks_reply
-                st.error("😕 An error occurred while processing the user input. Please try again.")
+                st.error(ai_responses)
+                st.error("😕 An error occurred while processing the user input.")
             # Store the message in the chat history
             if not evaluation_error: st.session_state.chat_history.append(message)  
 
             # Use the generator function with st.write_stream
             with st.chat_message("assistant", avatar="🤖"):
                 if not evaluation_error: st.write(ai_responses)
-                else: st.write("I'm sorry, probably your input was not clear enough.😅 \n Please try again.🙏")
+                else: st.write("Please try to be more clear 😢🙏")
         except Exception as e:
             st.error(f'{type(e).__name__,}\n{e}', icon="🚨")
-            conversation.memory.clear()
+            #conversation.memory.clear()
 
         # Append the full response to session_state.messages
         if isinstance(ai_responses, str):
