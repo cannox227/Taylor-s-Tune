@@ -92,7 +92,8 @@ def main():
     
     # Set up the Groq client 
     client = ChatGroq(
-        api_key=st.secrets["GROQ_API_KEY"],
+        # api_key=st.secrets["GROQ_API_KEY"],
+        api_key = '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', # local testing
         model_name=model_option,
         max_tokens=max_tokens
     )
