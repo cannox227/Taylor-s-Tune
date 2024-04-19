@@ -2,7 +2,7 @@ import numpy as np
 import os
 import pandas as pd
 
-data = pd.read_csv(os.path.join(os.getcwd(), 'data', 'cleaned_data', 'rag_dataset.csv'))
+data = pd.read_csv('data/cleaned_data/rag_dataset.csv')
 def get_songs(answers):
     numsongs=180
 
@@ -67,3 +67,11 @@ def get_songs(answers):
         res.append(title[item])
 
     return res
+
+def find_match(song_title):
+    # find song url based on the song title
+    try:
+        url = data[data['song_name'] == song_title]['url'].values[0]
+    except:
+        url = 'No url available'
+    return url

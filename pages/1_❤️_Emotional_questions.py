@@ -7,7 +7,11 @@ from ts_questionaire import *
 st.set_page_config(page_title="Emotional Questions", page_icon="❓")
 
 st.markdown("# ❓ Emotional Questions")
-st.markdown("*This set of questions are used by the LLM to emphatize with the user in order to better understand the context of the prompt*")
+st.markdown("This work was inspired by the paper *[I Knew You Were Trouble: Emotional Trends in the Repertoire of Taylor Swift](https://arxiv.org/abs/2103.16737)*")
+st.markdown("## Instructions")
+st.markdown("This page simulates the usage of the [`taylorswift` library](https://pypi.org/project/taylorswift/), which is a Python package that provides song suggestions based on emotional criteria. (No fancy LLMs here, just some good old statistics tools!)")
+st.markdown("*Answer to each question in order to obtain songs suggestions*")
+
 st.markdown("## Question 1")
 # st.markdown("### Which of these best describes your relationship?\n")
 q1 = """1 - Our relationship ended because of cataclysmic past offenses. OR Our relationship has some serious problems.
@@ -115,7 +119,7 @@ else:
     answers = [q1_q[0], q2_q[0], q3_q[0], q4_q[0], q5_q[0], q6_q[0]]
     answers = list(map(int, answers))
     st.write(f"Your answers are: {answers}")
-    print(answers)
-    print(answers[1])
-    # error out of range
-    st.write(f"{get_songs([answers])}")
+    songs = get_songs(answers)
+    urls = [find_match(s) for s in songs]
+    for s, u in zip(songs, urls):
+        st.write(f"- {s} ({u})")
